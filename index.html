@@ -997,7 +997,7 @@ footer p{font-size:10px;letter-spacing:0.4em;text-transform:uppercase;color:var(
       <div class="contact-info-list">
         <div class="contact-info-row">
           <span class="contact-info-label">Email</span>
-          <span class="contact-info-val"><a href="/cdn-cgi/l/email-protection#8ffdeaa1fffde0e5eaecfba1edfbcfe8e2eee6e3a1ece0e2"><span class="__cf_email__" data-cfemail="7103145f01031e1b1412055f130531161c10181d5f121e1c">[email&#160;protected]</span></a></span>
+          <span class="contact-info-val"><a href="mailto:re.project.bt@gmail.com">re.project.bt@gmail.com</a></span>
         </div>
         <div class="contact-info-row">
           <span class="contact-info-label">Line ID</span>
@@ -1025,11 +1025,11 @@ footer p{font-size:10px;letter-spacing:0.4em;text-transform:uppercase;color:var(
           <p>點此加入，直接傳訊息給我</p>
         </div>
       </a>
-      <a href="/cdn-cgi/l/email-protection#0c7e69227c7e6366696f78226e784c6b616d6560226f6361" class="email-cta">
+      <a href="mailto:re.project.bt@gmail.com" class="email-cta">
         <div class="email-cta-icon">✉️</div>
         <div class="email-cta-text">
           <h4>寄信給我</h4>
-          <p><span class="__cf_email__" data-cfemail="4537206b35372a2f2026316b2731052228242c296b262a28">[email&#160;protected]</span></p>
+          <p>re.project.bt@gmail.com</p>
         </div>
       </a>
     </div>
@@ -1042,7 +1042,7 @@ footer p{font-size:10px;letter-spacing:0.4em;text-transform:uppercase;color:var(
   <p class="cf-desc">大部分客戶一次專案的製作時間，從第一次聚焦方案到完成交付所有影片，平均為三個月左右。為了讓你獲得更舒適的建議與服務，建議在首次聯繫時一併說明想配合的檔期排程。</p>
   <div class="cf-rows">
     <div class="cf-row"><span class="cf-label">Name</span><span class="cf-val">Betty</span></div>
-    <div class="cf-row"><span class="cf-label">Email</span><span class="cf-val"><a href="/cdn-cgi/l/email-protection#b9cbdc97c9cbd6d3dcdacd97dbcdf9ded4d8d0d597dad6d4"><span class="__cf_email__" data-cfemail="97e5f2b9e7e5f8fdf2f4e3b9f5e3d7f0faf6fefbb9f4f8fa">[email&#160;protected]</span></a></span></div>
+    <div class="cf-row"><span class="cf-label">Email</span><span class="cf-val"><a href="mailto:re.project.bt@gmail.com">re.project.bt@gmail.com</a></span></div>
     <div class="cf-row"><span class="cf-label">Line ID</span><span class="cf-val">—</span></div>
     <div class="cf-row"><span class="cf-label">Location</span><span class="cf-val">Taoyuan, Taiwan</span></div>
     <div class="cf-row"><span class="cf-label">公司名稱</span><span class="cf-val">莉芸企業社</span></div>
@@ -1073,7 +1073,7 @@ footer p{font-size:10px;letter-spacing:0.4em;text-transform:uppercase;color:var(
     </div>
   </div>
 </div>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 function openProjectModal(id){document.getElementById(id).classList.add('open');document.body.style.overflow='hidden';}
 function closeProjectModal(id){document.getElementById(id).classList.remove('open');document.body.style.overflow='';}
 function closeCaseModal(){var m=document.getElementById('case-modal');if(m)m.classList.remove('open');document.body.style.overflow='';}
@@ -1113,4 +1113,17 @@ document.addEventListener('DOMContentLoaded',function(){
   var ham=document.getElementById('hamburger');
   var menu=document.getElementById('nav-menu');
   if(ham&&menu){
-    ham.addEvent
+    ham.addEventListener('click',function(e){e.stopPropagation();menu.classList.toggle('open');});
+    document.addEventListener('click',function(e){if(window.innerWidth<=768&&!menu.contains(e.target)&&!ham.contains(e.target)){menu.classList.remove('open');}});
+  }
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){
+      closeCaseModal();
+      document.querySelectorAll('.modal-overlay.open').forEach(function(m){m.classList.remove('open');});
+      document.body.style.overflow='';
+    }
+  });
+});
+</script>
+</body>
+</html>
