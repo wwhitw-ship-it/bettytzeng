@@ -410,7 +410,7 @@ footer p{font-size:10px;letter-spacing:0.4em;text-transform:uppercase;color:var(
 .proof-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;}
 .proof-item{aspect-ratio:9/16;position:relative;overflow:hidden;border:1px solid var(--border);}
 .proof-item img{width:100%;height:100%;object-fit:cover;}
-.proof-blur{position:absolute;inset:0;background:linear-gradient(to bottom, rgba(252,250,247,0.85) 0%, transparent 35%);}
+.proof-blur{position:absolute;inset:0;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);background:rgba(252,250,247,0.3);-webkit-mask-image:linear-gradient(to bottom, black 0%, black 80%, transparent 100%);mask-image:linear-gradient(to bottom, black 0%, black 80%, transparent 100%);}
 @media(max-width:768px){
   .proof-section{padding:40px 24px;}
   .proof-grid{grid-template-columns:repeat(4,1fr);gap:6px;}
