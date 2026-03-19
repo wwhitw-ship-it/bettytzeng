@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Betty Tzeng · Social Media Plan</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600&family=Noto+Serif+TC:wght@300;400;500&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&family=Noto+Serif+TC:wght@300;400;500&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
@@ -21,513 +20,425 @@
 }
 html{scroll-behavior:smooth;}
 body{font-family:'Montserrat','Noto Sans TC',sans-serif;background:#fff;color:var(--text);line-height:1.9;-webkit-font-smoothing:antialiased;}
-
-/* ── NAV ── */
-nav{
-  display:flex;justify-content:space-between;align-items:center;
-  padding:16px 56px;border-bottom:1px solid var(--border);
-  background:#fff;position:sticky;top:0;z-index:200;
-}
-.logo{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;font-weight:400;color:var(--text);text-decoration:none;line-height:1;}
-.logo span{display:block;font-family:'Montserrat',sans-serif;font-style:normal;font-size:8px;letter-spacing:0.5em;text-transform:uppercase;color:var(--light);margin-top:3px;}
-.nav-links{display:flex;align-items:center;gap:36px;}
-.nav-links a{font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:var(--light);cursor:pointer;text-decoration:none;transition:color 0.3s;font-family:'Montserrat',sans-serif;position:relative;background:none;border:none;padding:0;}
-.nav-links a:hover{color:var(--text);}
-.nav-links a.active{color:var(--orange);}
-.nav-links a.active::after{content:'';position:absolute;bottom:-4px;left:50%;transform:translateX(-50%);width:16px;height:1.5px;background:var(--orange);}
-.nav-cta{padding:8px 20px !important;border:1px solid rgba(216,107,62,0.4) !important;border-radius:99px !important;color:var(--orange) !important;transition:all 0.3s !important;}
-.nav-cta:hover{background:var(--orange) !important;color:#fff !important;}
-
-/* ── PAGES ── */
 .page{display:none;}
 .page.active{display:block;}
 
-/* ── HERO SHARED ── */
-.hero{padding:100px 56px 80px;border-bottom:1px solid var(--border);min-height:280px;display:flex;align-items:flex-end;}
+/* ── NAV ── */
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 56px;border-bottom:1px solid var(--border);background:#fff;position:sticky;top:0;z-index:200;}
+.logo{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;font-weight:400;color:var(--text);text-decoration:none;line-height:1.1;cursor:pointer;}
+.logo span{display:block;font-family:'Montserrat',sans-serif;font-style:normal;font-size:7.5px;letter-spacing:0.55em;text-transform:uppercase;color:var(--light);margin-top:3px;}
+.nav-links{display:flex;align-items:center;gap:36px;}
+.nav-links a{font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--light);cursor:pointer;text-decoration:none;transition:color 0.3s;font-family:'Montserrat',sans-serif;background:none;border:none;padding:0;position:relative;}
+.nav-links a:hover{color:var(--text);}
+.nav-links a.active{color:var(--orange);}
+.nav-links a.active::after{content:'';position:absolute;bottom:-4px;left:50%;transform:translateX(-50%);width:16px;height:1.5px;background:var(--orange);}
+.nav-cta{padding:8px 22px !important;border:1px solid rgba(216,107,62,0.5) !important;border-radius:99px !important;color:var(--orange) !important;transition:all 0.3s !important;}
+.nav-cta:hover{background:var(--orange) !important;color:#fff !important;}
+.hamburger{display:none;background:none;border:none;font-size:22px;cursor:pointer;color:var(--text);padding:4px;line-height:1;}
+@media(max-width:768px){
+  nav{padding:14px 24px;}
+  .hamburger{display:block;}
+  .nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--border);padding:16px 24px;gap:0;z-index:9999;}
+  .nav-links.open{display:flex;}
+  .nav-links a{display:block;font-size:14px;padding:14px 0;border-bottom:1px solid var(--border);color:var(--sub);}
+  .nav-links a:last-child{border-bottom:none;}
+}
+
+/* ── HERO ── */
+.hero{padding:72px 56px 56px;border-bottom:1px solid var(--border);min-height:220px;display:flex;align-items:flex-end;}
 .hero-no-border{border-bottom:none;}
-.hero-eyebrow{font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:0.55em;text-transform:uppercase;color:var(--orange);margin-bottom:28px;display:block;}
-.hero h1{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;line-height:1.15;color:var(--text);letter-spacing:-0.5px;}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;line-height:1.25;color:var(--text);}
 .hero h1 em{font-style:italic;color:var(--orange);}
-.hero-sub{font-size:16px;color:var(--sub);margin-top:20px;font-weight:300;max-width:520px;line-height:2;}
+.hero-eyebrow{font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:0.55em;text-transform:uppercase;color:var(--orange);margin-bottom:24px;display:block;}
+.hero-sub{font-size:14px;color:var(--sub);margin-top:16px;font-weight:300;max-width:520px;line-height:1.9;}
+@media(max-width:768px){
+  .hero{padding:48px 24px 36px;}
+  .hero h1{font-size:24px;}
+}
 
-/* ── SECTION SHARED ── */
-.section{padding:96px 56px;}
-.section-alt{padding:96px 56px;background:var(--bg);}
-.block-label{font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:0.5em;text-transform:uppercase;color:var(--light);margin-bottom:48px;display:block;}
-.sec-divider{height:1px;background:var(--border);margin:0 56px;}
-.sec-title{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;color:var(--text);margin-bottom:8px;}
-.sec-title em{font-style:italic;color:var(--orange);}
+/* ── HOME PAGE ── */
+/* 品牌宣言 */
+.home-statement{padding:96px 56px;border-bottom:1px solid var(--border);}
+.statement-label{font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:0.5em;text-transform:uppercase;color:var(--light);margin-bottom:40px;display:block;}
+.statement-text{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;line-height:1.6;color:var(--text);max-width:800px;}
+.statement-text em{font-style:italic;color:var(--orange);}
+@media(max-width:768px){
+  .home-statement{padding:56px 24px;}
+  .statement-text{font-size:24px;}
+}
 
-/* ── CASES PAGE ── */
-.case-filter{display:flex;gap:0;padding:0 56px;border-bottom:1px solid var(--border);overflow-x:auto;}
+/* 工作方式 */
+.home-process{border-bottom:1px solid var(--border);}
+.process-header{padding:64px 56px 40px;display:flex;justify-content:space-between;align-items:flex-end;}
+.process-header h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:var(--text);}
+.process-header h2 em{font-style:italic;color:var(--orange);}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);}
+.process-step{padding:48px 40px;border-right:1px solid var(--border);position:relative;}
+.process-step:last-child{border-right:none;}
+.process-step-num{font-family:'Cormorant Garamond',serif;font-size:48px;font-style:italic;color:var(--peach);line-height:1;margin-bottom:20px;opacity:0.7;}
+.process-step-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:var(--text);margin-bottom:12px;}
+.process-step-desc{font-size:14px;color:var(--sub);line-height:1.9;font-weight:300;}
+.process-step-arrow{position:absolute;top:48px;right:-12px;width:24px;height:1px;background:var(--border);z-index:1;}
+.process-step-arrow::after{content:'';position:absolute;right:-1px;top:-3px;width:6px;height:6px;border-right:1px solid var(--border);border-top:1px solid var(--border);transform:rotate(45deg);}
+.process-step:last-child .process-step-arrow{display:none;}
+@media(max-width:768px){
+  .process-header{padding:40px 24px 24px;}
+  .process-steps{grid-template-columns:1fr;}
+  .process-step{padding:32px 24px;border-right:none;border-bottom:1px solid var(--border);}
+  .process-step:last-child{border-bottom:none;}
+  .process-step-arrow{display:none;}
+}
+
+/* 差異化 */
+.home-diff{padding:96px 56px;border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
+.diff-left h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:var(--text);margin-bottom:24px;line-height:1.3;}
+.diff-left h2 em{font-style:italic;color:var(--orange);}
+.diff-left p{font-size:14px;color:var(--sub);line-height:2;font-weight:400;}
+.diff-right{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--border);}
+.diff-item{padding:24px 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:24px 1fr;gap:20px;align-items:start;}
+.diff-item-mark{font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;color:var(--orange);margin-top:2px;}
+.diff-item-text{font-size:14px;color:var(--sub);line-height:1.9;font-weight:400;}
+.diff-item-text strong{color:var(--text);font-weight:500;}
+@media(max-width:768px){
+  .home-diff{padding:56px 24px;grid-template-columns:1fr;gap:40px;}
+}
+
+/* 精選案例 */
+.home-cases{border-bottom:1px solid var(--border);}
+.home-cases-header{padding:64px 56px 40px;display:flex;justify-content:space-between;align-items:center;}
+.home-cases-header h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;}
+.home-cases-header h2 em{font-style:italic;color:var(--orange);}
+.home-cases-more{font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--orange);cursor:pointer;font-family:'Montserrat',sans-serif;background:none;border:none;transition:opacity 0.2s;}
+.home-cases-more:hover{opacity:0.6;}
+.home-cases-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--border);}
+.home-case-item{border-right:1px solid var(--border);cursor:pointer;transition:background 0.3s;}
+.home-case-item:last-child{border-right:none;}
+.home-case-item:hover{background:var(--bg);}
+.home-case-img{aspect-ratio:4/3;background:var(--bg);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:center;}
+.home-case-body{padding:28px 32px;}
+.home-case-industry{font-size:9px;letter-spacing:0.4em;text-transform:uppercase;color:var(--orange);font-family:'Montserrat',sans-serif;margin-bottom:10px;}
+.home-case-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:var(--text);margin-bottom:8px;line-height:1.3;}
+.home-case-item:hover .home-case-title{color:var(--orange);}
+.home-case-result{font-size:12px;color:var(--sub);font-weight:300;}
+@media(max-width:768px){
+  .home-cases-header{padding:40px 24px 24px;}
+  .home-cases-grid{grid-template-columns:1fr;}
+  .home-case-item{border-right:none;border-bottom:1px solid var(--border);}
+}
+
+/* CTA 區塊 */
+.home-cta{padding:96px 56px;background:var(--bg);border-bottom:1px solid var(--border);text-align:center;}
+.home-cta h2{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;color:var(--text);margin-bottom:16px;line-height:1.2;}
+.home-cta h2 em{font-style:italic;color:var(--orange);}
+.home-cta p{font-size:14px;color:var(--sub);font-weight:300;margin-bottom:40px;line-height:2;}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+.btn-primary{padding:14px 36px;background:var(--orange);color:#fff;border:none;border-radius:99px;font-size:11px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;cursor:pointer;font-family:'Montserrat',sans-serif;transition:all 0.3s;text-decoration:none;display:inline-block;}
+.btn-primary:hover{background:#c55a2e;}
+.btn-secondary{padding:14px 36px;background:transparent;color:var(--orange);border:1px solid rgba(216,107,62,0.4);border-radius:99px;font-size:11px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;cursor:pointer;font-family:'Montserrat',sans-serif;transition:all 0.3s;}
+.btn-secondary:hover{background:var(--orange);color:#fff;border-color:var(--orange);}
+@media(max-width:768px){.home-cta{padding:64px 24px;}}
+
+/* ── PORTFOLIO PAGE ── */
+.pf-filter{display:flex;gap:0;padding:0 56px;border-bottom:1px solid var(--border);overflow-x:auto;}
 .filter-tab{font-size:10px;letter-spacing:0.3em;text-transform:uppercase;padding:16px 24px;cursor:pointer;color:var(--light);border-bottom:2px solid transparent;white-space:nowrap;font-family:'Montserrat',sans-serif;transition:all 0.2s;background:none;border-top:none;border-left:none;border-right:none;}
 .filter-tab:hover{color:var(--text);}
 .filter-tab.active{color:var(--orange);border-bottom-color:var(--orange);}
-.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;padding:2px;}
-.case-card{position:relative;aspect-ratio:4/3;background:var(--bg);overflow:hidden;cursor:pointer;}
-.case-card:hover .case-hover{opacity:1;}
-.case-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:24px;}
-.case-bars{display:flex;flex-direction:column;gap:6px;width:60%;}
-.case-bar{height:3px;border-radius:2px;background:var(--peach);opacity:0.4;}
-.case-views{font-family:'Cormorant Garamond',serif;font-size:28px;font-style:italic;color:var(--orange);margin-top:8px;}
-.case-views span{font-size:10px;font-family:'Montserrat',sans-serif;font-style:normal;letter-spacing:0.2em;color:var(--light);display:block;margin-top:2px;}
-.case-hover{position:absolute;inset:0;background:rgba(45,42,38,0.88);opacity:0;transition:opacity 0.3s;display:flex;flex-direction:column;justify-content:flex-end;padding:28px;}
-.case-hover-tag{font-size:9px;letter-spacing:0.3em;text-transform:uppercase;color:var(--peach);margin-bottom:8px;font-family:'Montserrat',sans-serif;}
-.case-hover h3{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:6px;}
-.case-hover p{font-size:12px;color:rgba(255,255,255,0.6);line-height:1.7;font-weight:300;}
-.case-empty{background:var(--bg);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;}
-.case-empty p{font-size:11px;color:var(--light);font-weight:300;}
-.case-empty span{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(138,133,128,0.5);font-family:'Montserrat',sans-serif;}
-
-/* STATS */
-/* ── SERVICES PAGE ── */
-.svc-section{padding:80px 56px;}
-.svc-plan-row{display:grid;grid-template-columns:200px 1fr 1fr;gap:0;margin-bottom:0;}
-.svc-plan-label{padding:32px 0;}
-.svc-plan-card{padding:40px 40px 32px;border:1px solid var(--border);border-right:none;text-align:left;}
-.svc-plan-card:last-child{border-right:1px solid var(--border);}
-.svc-plan-featured{background:var(--bg);}
-.svc-plan-tag{font-size:9px;letter-spacing:0.35em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;font-family:'Montserrat',sans-serif;}
-.svc-plan-name{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:var(--text);margin-bottom:8px;}
-.svc-plan-price{font-family:'Cormorant Garamond',serif;font-size:36px;font-style:italic;color:var(--orange);font-weight:300;}
-
-.svc-compare{border:1px solid var(--border);border-top:none;}
-.svc-compare-group{border-bottom:1px solid var(--border);}
-.svc-compare-title{display:grid;grid-template-columns:200px 1fr 1fr;font-size:10px;letter-spacing:0.35em;text-transform:uppercase;color:var(--light);font-family:'Montserrat',sans-serif;padding:20px 0 12px;border-bottom:1px solid var(--border);}
-.svc-compare-title::before{content:'';display:block;}
-.svc-compare-row{display:grid;grid-template-columns:200px 1fr 1fr;align-items:center;border-bottom:1px solid var(--border);min-height:52px;}
-.svc-compare-row:last-child{border-bottom:none;}
-.svc-compare-label{font-size:13px;color:var(--sub);padding:14px 0;font-weight:300;}
-.svc-compare-val{font-size:15px;color:var(--sub);padding:14px 40px;font-weight:300;border-left:1px solid var(--border);}
-.svc-featured-col{background:var(--bg);}
-
-.svc-detail-list{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--border);border-left:1px solid var(--border);}
-.svc-detail-item{padding:48px 40px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);}
-.svc-detail-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:var(--text);margin-bottom:14px;}
-.svc-detail-desc{font-size:15px;color:var(--light);line-height:1.9;font-weight:300;}
-
-.svc-flow{display:flex;align-items:center;gap:0;flex-wrap:wrap;}
-.svc-flow-item{text-align:center;}
-.svc-flow-num{font-family:'Cormorant Garamond',serif;font-size:32px;font-style:italic;color:var(--peach);line-height:1;margin-bottom:6px;}
-.svc-flow-name{font-size:15px;color:var(--sub);font-weight:400;}
-.svc-flow-arrow{font-size:18px;color:var(--border);padding:0 20px;margin-bottom:16px;}
-
-/* ── PORTFOLIO GRID ── */
 .pf-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;padding:64px 56px;}
 .pf-item{cursor:pointer;}
-.pf-img{aspect-ratio:16/10;background:var(--bg);overflow:hidden;margin-bottom:20px;border:1px solid var(--border);}
-.pf-img-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;}
-.pf-views{font-family:'Cormorant Garamond',serif;font-size:40px;font-style:italic;color:var(--orange);text-align:center;line-height:1;}
-.pf-views span{display:block;font-size:11px;font-family:'Montserrat',sans-serif;font-style:normal;letter-spacing:0.25em;color:var(--light);margin-top:6px;}
-.pf-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:var(--text);margin-bottom:6px;line-height:1.3;}
+.pf-img{aspect-ratio:16/10;background:var(--bg);border:1px solid var(--border);margin-bottom:20px;display:flex;align-items:center;justify-content:center;overflow:hidden;transition:border-color 0.3s;}
+.pf-item:hover .pf-img{border-color:rgba(216,107,62,0.3);}
+.pf-img-text{font-size:12px;color:var(--light);font-weight:300;}
+.pf-industry{font-size:9px;letter-spacing:0.4em;text-transform:uppercase;color:var(--orange);font-family:'Montserrat',sans-serif;margin-bottom:8px;}
+.pf-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:var(--text);margin-bottom:6px;line-height:1.3;}
 .pf-item:hover .pf-title{color:var(--orange);}
-.pf-type{font-size:15px;color:var(--sub);margin-bottom:4px;}
-.pf-client{font-size:14px;color:var(--light);margin-bottom:4px;font-weight:300;}
-.pf-desc{font-size:14px;color:var(--light);font-weight:300;}
+.pf-meta{font-size:13px;color:var(--sub);font-weight:300;}
+.pf-result{font-size:13px;color:var(--sub);font-weight:300;margin-top:4px;}
+@media(max-width:768px){
+  .pf-filter{padding:0 24px;}
+  .pf-grid{grid-template-columns:1fr;gap:32px;padding:40px 24px;}
+}
 
-.stats-row{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
-.stat-item{padding:48px 56px;border-right:1px solid var(--border);}
-.stat-item:last-child{border-right:none;}
-.stat-num{font-family:'Cormorant Garamond',serif;font-size:52px;font-style:italic;color:var(--orange);line-height:1;margin-bottom:8px;}
-.stat-label{font-size:11px;color:var(--light);letter-spacing:0.1em;font-weight:300;}
+/* ── PRICING PAGE ── */
+.pr-block{display:grid;grid-template-columns:260px 1fr;gap:0;padding:56px;border-bottom:1px solid var(--border);}
+.pr-block-left{}
+.pr-block-en{font-family:'Cormorant Garamond',serif;font-size:14px;font-style:italic;color:var(--light);margin-bottom:6px;}
+.pr-block-name{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:var(--text);margin-bottom:8px;}
+.pr-block-tagline{font-size:13px;color:var(--sub);line-height:1.8;font-weight:300;max-width:200px;}
+.pr-block-price{font-family:'Cormorant Garamond',serif;font-size:38px;font-style:italic;color:var(--orange);font-weight:300;margin-top:20px;}
+.pr-block-right{padding-left:56px;border-left:1px solid var(--border);}
+.pr-block-intro{font-size:14px;color:var(--sub);line-height:2;font-weight:300;margin-bottom:32px;padding-bottom:32px;border-bottom:1px solid var(--border);}
+.pr-block-group-title{font-size:10px;letter-spacing:0.4em;text-transform:uppercase;color:var(--light);font-family:'Montserrat',sans-serif;margin-bottom:16px;margin-top:28px;}
+.pr-block-group-title:first-of-type{margin-top:0;}
+.pr-block-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:4px;}
+.pr-block-list li{font-size:14px;color:var(--sub);font-weight:300;line-height:1.7;display:flex;align-items:baseline;gap:10px;}
+.pr-block-list li::before{content:'—';color:var(--peach);flex-shrink:0;font-size:12px;}
+@media(max-width:768px){
+  .pr-block{grid-template-columns:1fr;padding:40px 24px;gap:32px;}
+  .pr-block-right{padding-left:0;border-left:none;border-top:1px solid var(--border);padding-top:32px;}
+}
 
-/* ── INDUSTRY ── */
-.industry-section{border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
-.industry-grid{display:grid;grid-template-columns:repeat(4,1fr);}
-.industry-item{padding:48px 40px;border-right:1px solid var(--border);transition:background 0.3s;}
-.industry-item:hover{background:var(--bg);}
-.industry-num{font-family:'Cormorant Garamond',serif;font-size:36px;font-style:italic;color:var(--peach);opacity:0.5;line-height:1;margin-bottom:12px;}
-.industry-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:var(--text);margin-bottom:20px;}
-.industry-articles{display:flex;flex-direction:column;gap:12px;}
-.industry-article{font-size:13px;color:var(--orange);text-decoration:none;letter-spacing:0.1em;font-family:'Montserrat',sans-serif;transition:opacity 0.2s;}
-.industry-article:hover{opacity:0.6;}
-
-/* ── SERVICES PAGE ── */
-.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--border);border-left:1px solid var(--border);}
-.feat-item{padding:48px 40px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);}
-.feat-num{font-family:'Cormorant Garamond',serif;font-size:48px;font-style:italic;color:var(--peach);line-height:1;margin-bottom:16px;opacity:0.6;}
-.feat-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;margin-bottom:10px;color:var(--text);}
-.feat-desc{font-size:12px;color:var(--light);line-height:1.9;font-weight:300;}
-
-.plans-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;border:1px solid var(--border);}
-.plan-card{padding:52px 44px;position:relative;transition:background 0.3s;border-right:1px solid var(--border);}
-.plan-card:last-child{border-right:none;}
-.plan-card:hover{background:var(--bg);}
-.plan-badge{display:inline-block;font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--orange);border:1px solid rgba(216,107,62,0.3);padding:4px 14px;border-radius:99px;margin-bottom:24px;font-family:'Montserrat',sans-serif;}
-.plan-name{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;margin-bottom:6px;}
-.plan-price{font-family:'Cormorant Garamond',serif;font-size:52px;font-style:italic;color:var(--orange);font-weight:300;line-height:1;}
-.plan-qty{font-size:11px;color:var(--light);margin-top:6px;margin-bottom:20px;letter-spacing:0.15em;font-family:'Montserrat',sans-serif;}
-.plan-tagline{font-size:13px;color:var(--sub);margin-bottom:32px;line-height:1.8;border-left:2px solid var(--peach);padding-left:14px;}
-.plan-features{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:32px;}
-.plan-features li{font-size:12px;color:var(--sub);display:flex;align-items:flex-start;gap:10px;line-height:1.7;font-weight:300;}
-.check{color:var(--orange);flex-shrink:0;font-weight:600;}
-.bonus-li{color:var(--orange);}
-.plan-note{font-size:10px;color:var(--light);border-top:1px solid var(--border);padding-top:16px;margin-bottom:28px;}
-.plan-btn{display:inline-block;padding:13px 32px;background:transparent;color:var(--orange);border:1px solid rgba(216,107,62,0.4);border-radius:99px;font-size:12px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;cursor:pointer;transition:all 0.3s;font-family:'Montserrat',sans-serif;}
-.plan-btn:hover{background:var(--orange);color:#fff;border-color:var(--orange);}
-
-.proc-list{display:flex;flex-direction:column;border-top:1px solid var(--border);}
-.proc-item{display:grid;grid-template-columns:80px 220px 1fr;gap:40px;padding:48px 0;border-bottom:1px solid var(--border);align-items:start;}
-.proc-num{font-family:'Cormorant Garamond',serif;font-size:48px;font-style:italic;color:var(--peach);line-height:1;opacity:0.5;}
-.proc-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:var(--text);margin-bottom:6px;}
-.proc-duration{font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--light);font-family:'Montserrat',sans-serif;margin-bottom:14px;}
-.proc-tags{display:flex;flex-wrap:wrap;gap:8px;}
-.proc-tag{font-size:10px;padding:3px 12px;border:1px solid rgba(216,107,62,0.2);border-radius:99px;color:var(--orange);letter-spacing:0.1em;font-family:'Montserrat',sans-serif;}
-.proc-desc{font-size:13px;color:var(--sub);line-height:1.9;font-weight:300;}
-
-.equip-row{display:flex;gap:0;border:1px solid var(--border);}
-.equip-item{flex:1;padding:32px 36px;border-right:1px solid var(--border);}
-.equip-item:last-child{border-right:none;}
-.equip-label{font-size:9px;letter-spacing:0.4em;text-transform:uppercase;color:var(--light);margin-bottom:8px;font-family:'Montserrat',sans-serif;}
-.equip-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:var(--text);}
-
-/* ── FAQ ── */
-.faq-list{display:flex;flex-direction:column;border-top:1px solid var(--border);}
-.faq-item{padding:28px 0;border-bottom:1px solid var(--border);cursor:pointer;}
-.faq-q{font-size:17px;font-weight:400;display:flex;justify-content:space-between;align-items:center;gap:16px;color:var(--text);}
-.faq-arrow{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--orange);transition:transform 0.4s;flex-shrink:0;}
-.faq-item.open .faq-arrow{transform:rotate(180deg);}
-.faq-a{font-size:15px;color:var(--sub);line-height:2;margin-top:16px;display:none;font-weight:300;max-width:640px;}
-.faq-item.open .faq-a{display:block;}
-
-
-/* ── BLOG LAYOUT ── */
-.blog-layout{display:grid;grid-template-columns:1fr 280px;gap:0;padding:56px;}
-.blog-main{}
-.blog-filter{display:flex;gap:0;border-bottom:1px solid var(--border);margin-bottom:0;overflow-x:auto;}
-.blog-list{display:grid;grid-template-columns:1fr 1fr;gap:48px;}
-.blog-item{cursor:pointer;transition:opacity 0.2s;}
-.blog-item:hover{opacity:0.7;}
-.blog-item:hover .blog-title{color:var(--orange);}
-.blog-thumb{background:var(--bg);border:1px solid var(--border);aspect-ratio:16/10;width:100%;margin-bottom:16px;}
-.blog-item-body{display:flex;flex-direction:column;gap:6px;}
-
-.blog-cat{font-size:11px;letter-spacing:0.35em;text-transform:uppercase;color:var(--orange);font-family:"Montserrat",sans-serif;}
-.blog-title{font-family:"Cormorant Garamond",serif;font-size:20px;font-weight:400;color:var(--text);line-height:1.35;}
-.blog-excerpt{font-size:12px;color:var(--light);line-height:1.8;font-weight:300;}
-.blog-date{font-size:12px;color:var(--light);letter-spacing:0.2em;font-family:"Montserrat",sans-serif;margin-top:auto;}
-
-/* 右側分類 */
-.blog-sidebar{padding-left:80px;}
-.blog-sidebar-label{font-size:11px;letter-spacing:0.4em;text-transform:uppercase;color:var(--light);font-family:"Montserrat",sans-serif;margin-bottom:16px;display:block;}
-.blog-cat-list{display:flex;flex-direction:column;border-top:1px solid var(--border);padding-top:0;}
-.blog-cat-item{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--border);cursor:pointer;transition:color 0.2s;}
-.blog-cat-item:hover .blog-cat-name{color:var(--orange);}
-.blog-cat-name{font-size:16px;color:var(--sub);font-weight:300;}
-.blog-cat-count{font-size:12px;color:var(--light);background:var(--bg);border-radius:99px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-family:"Montserrat",sans-serif;}
-.blog-subscribe-desc{font-size:14px;color:var(--light);line-height:1.8;margin-bottom:16px;font-weight:300;}
-
-@media (max-width:768px){
-  .blog-layout{grid-template-columns:1fr;padding:32px 24px;gap:48px;}
-  .blog-main{}
-  .blog-sidebar{padding-left:0;border-top:1px solid var(--border);padding-top:40px;}
-  .blog-list{grid-template-columns:1fr;gap:40px;}
+.pr-section{padding:56px 56px 0;}
+.pr-section:last-child{padding-bottom:80px;}
+.pr-section-title{font-size:10px;letter-spacing:0.4em;text-transform:uppercase;color:var(--light);font-family:'Montserrat',sans-serif;padding-bottom:24px;border-bottom:2px solid var(--text);margin-bottom:0;}
+.pr-service-item{padding:28px 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:start;}
+.pr-service-item:last-child{border-bottom:none;}
+.pr-service-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:var(--text);}
+.pr-service-desc{font-size:14px;color:var(--sub);line-height:1.9;font-weight:300;}
+.pr-cta{padding:56px;background:var(--bg);border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:40px;}
+.pr-cta-text h3{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:var(--text);margin-bottom:8px;}
+.pr-cta-text p{font-size:13px;color:var(--light);font-weight:300;}
+@media(max-width:768px){
+  .pr-section{padding:40px 24px 0;}
+  .pr-section:last-child{padding-bottom:56px;}
+  .pr-service-item{grid-template-columns:1fr;gap:8px;}
+  .pr-cta{padding:40px 24px;flex-direction:column;align-items:flex-start;}
 }
 
 /* ── BLOG PAGE ── */
-.blog-filter{display:flex;gap:0;padding:0 56px;border-bottom:1px solid var(--border);overflow-x:auto;}
-.blog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;padding:56px;}
-.blog-card{padding:40px;border:1px solid var(--border);transition:all 0.3s;cursor:pointer;}
-.blog-card:hover{background:var(--bg);border-color:rgba(216,107,62,0.3);}
-.blog-cat{font-size:11px;letter-spacing:0.35em;text-transform:uppercase;color:var(--orange);margin-bottom:14px;font-family:'Montserrat',sans-serif;}
-.blog-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:var(--text);margin-bottom:12px;line-height:1.3;}
-.blog-excerpt{font-size:12px;color:var(--light);line-height:1.9;margin-bottom:20px;font-weight:300;}
-.blog-meta{display:flex;justify-content:space-between;align-items:center;}
-.blog-date{font-size:12px;color:var(--light);letter-spacing:0.2em;font-family:'Montserrat',sans-serif;}
-.blog-read{font-size:10px;color:var(--orange);letter-spacing:0.2em;font-family:'Montserrat',sans-serif;}
-.blog-sidebar{padding:56px;border-top:1px solid var(--border);}
-.subscribe-box{border:1px solid var(--border);padding:48px;max-width:600px;}
-.subscribe-box h3{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;margin-bottom:8px;}
-.subscribe-box p{font-size:14px;color:var(--light);margin-bottom:24px;font-weight:300;}
-.subscribe-form{display:flex;flex-direction:column;gap:0;border:1px solid var(--border);}
-.subscribe-form input{flex:1;padding:14px 20px;font-size:13px;border:none;background:transparent;color:var(--text);font-family:'Montserrat',sans-serif;outline:none;}
-.subscribe-form input::placeholder{color:var(--light);}
-.subscribe-form button{padding:14px 28px;background:var(--orange);color:#fff;border:none;font-size:10px;letter-spacing:0.3em;text-transform:uppercase;cursor:pointer;font-family:'Montserrat',sans-serif;transition:background 0.3s;white-space:nowrap;}
-.subscribe-form button:hover{background:#c55a2e;}
-
-/* ── CONTACT PAGE ── */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;border:1px solid var(--border);}
-.contact-info{padding:56px;}
-.contact-info h2{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;margin-bottom:8px;line-height:1.2;}
-.contact-info h2 em{font-style:italic;color:var(--orange);}
-.contact-info p{font-size:13px;color:var(--sub);line-height:2;margin-bottom:40px;font-weight:300;}
-.contact-details{display:flex;flex-direction:column;gap:24px;}
-.contact-row{display:flex;flex-direction:column;gap:4px;}
-.contact-label{font-size:9px;letter-spacing:0.4em;text-transform:uppercase;color:var(--light);font-family:'Montserrat',sans-serif;}
-.contact-val{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;}
-.contact-val a{color:var(--orange);text-decoration:none;font-style:italic;}
-.contact-form{padding:56px;border-left:1px solid var(--border);}
-.contact-form h3{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;margin-bottom:32px;}
-.form-group{margin-bottom:20px;}
-.form-group label{display:block;font-size:9px;letter-spacing:0.4em;text-transform:uppercase;color:var(--light);margin-bottom:8px;font-family:'Montserrat',sans-serif;}
-.form-group input,.form-group textarea,.form-group select{width:100%;padding:14px 0;border:none;border-bottom:1px solid var(--border);background:transparent;font-size:13px;color:var(--text);font-family:'Montserrat','Noto Sans TC',sans-serif;outline:none;transition:border-color 0.3s;font-weight:300;}
-.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-bottom-color:var(--orange);}
-.form-group textarea{resize:vertical;min-height:100px;}
-.form-group select{cursor:pointer;appearance:none;}
-.form-submit{display:inline-block;padding:14px 40px;background:var(--orange);color:#fff;border:none;border-radius:99px;font-size:10px;font-weight:600;letter-spacing:0.35em;text-transform:uppercase;cursor:pointer;transition:all 0.3s;font-family:'Montserrat',sans-serif;margin-top:12px;}
-.form-submit:hover{background:#c55a2e;}
-.form-note{font-size:11px;color:var(--light);margin-top:12px;font-weight:300;}
-
-
-
-
-/* ── AUTHOR ── */
-.blog-author-row{display:flex;align-items:center;gap:10px;margin-bottom:4px;}
-.blog-author-avatar{width:28px;height:28px;border-radius:50%;background:var(--peach);flex-shrink:0;}
-.blog-author-name{font-size:13px;color:var(--sub);font-weight:400;}
-.article-author{display:flex;align-items:center;gap:20px;padding:40px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin:48px 0;}
-.article-author-avatar{width:56px;height:56px;border-radius:50%;background:var(--peach);flex-shrink:0;}
-.article-author-name{font-family:"Cormorant Garamond",serif;font-size:20px;font-weight:400;color:var(--text);margin-bottom:4px;}
-.article-author-bio{font-size:13px;color:var(--light);font-weight:300;line-height:1.7;}
+.blog-layout{display:grid;grid-template-columns:1fr 260px;gap:0;padding:56px;}
+.blog-list{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+.blog-item{cursor:pointer;}
+.blog-thumb{aspect-ratio:16/10;background:var(--bg);border:1px solid var(--border);margin-bottom:16px;}
+.blog-cat{font-size:9px;letter-spacing:0.35em;text-transform:uppercase;color:var(--orange);font-family:'Montserrat',sans-serif;margin-bottom:8px;}
+.blog-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:var(--text);line-height:1.35;margin-bottom:8px;}
+.blog-item:hover .blog-title{color:var(--orange);}
+.blog-date{font-size:11px;color:var(--light);letter-spacing:0.2em;font-family:'Montserrat',sans-serif;}
+.blog-sidebar{padding-left:64px;}
+.sidebar-label{font-size:10px;letter-spacing:0.4em;text-transform:uppercase;color:var(--light);font-family:'Montserrat',sans-serif;margin-bottom:16px;display:block;}
+.blog-cat-list{display:flex;flex-direction:column;border-top:1px solid var(--border);}
+.blog-cat-item{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--border);}
+.blog-cat-item:hover .blog-cat-name{color:var(--orange);}
+.blog-cat-name{font-size:15px;color:var(--sub);font-weight:300;}
+.blog-cat-count{font-size:11px;color:var(--light);background:var(--bg);border-radius:99px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;}
+.blog-subscribe{margin-top:48px;}
+.blog-subscribe-desc{font-size:13px;color:var(--sub);line-height:1.8;margin-bottom:16px;font-weight:300;}
+.fb-follow-btn{display:inline-block;font-size:11px;letter-spacing:0.2em;color:var(--orange);text-decoration:none;border-bottom:1px solid rgba(216,107,62,0.3);padding-bottom:2px;transition:opacity 0.2s;}
+.fb-follow-btn:hover{opacity:0.6;}
+.subscribe-form{display:flex;flex-direction:column;border:1px solid var(--border);}
+.subscribe-form input{padding:14px 16px;font-size:13px;border:none;background:transparent;color:var(--text);font-family:'Montserrat',sans-serif;outline:none;}
+.subscribe-form button{padding:12px 16px;background:var(--orange);color:#fff;border:none;font-size:9px;letter-spacing:0.3em;text-transform:uppercase;cursor:pointer;font-family:'Montserrat',sans-serif;}
+@media(max-width:768px){
+  .blog-layout{grid-template-columns:1fr;padding:32px 24px;gap:48px;}
+  .blog-list{grid-template-columns:1fr;gap:32px;}
+  .blog-sidebar{padding-left:0;border-top:1px solid var(--border);padding-top:40px;}
+}
 
 /* ── ARTICLE PAGE ── */
-.article-layout{display:grid;grid-template-columns:1fr 280px;gap:0;padding:56px;}
-.article-main{}
+.article-layout{display:grid;grid-template-columns:1fr 260px;gap:0;padding:56px;}
 .article-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:32px;}
-.article-meta span{font-size:12px;letter-spacing:0.3em;color:var(--light);font-family:"Montserrat",sans-serif;}
-.article-back{background:none;border:none;font-size:12px;letter-spacing:0.2em;color:var(--orange);cursor:pointer;font-family:"Montserrat",sans-serif;text-transform:uppercase;padding:0;transition:opacity 0.2s;}
-.article-back:hover{opacity:0.6;}
+.article-meta span{font-size:11px;letter-spacing:0.3em;color:var(--light);font-family:'Montserrat',sans-serif;}
+.article-back{background:none;border:none;font-size:11px;letter-spacing:0.2em;color:var(--orange);cursor:pointer;font-family:'Montserrat',sans-serif;text-transform:uppercase;padding:0;}
 .article-thumb{aspect-ratio:16/9;background:var(--bg);border:1px solid var(--border);margin-bottom:48px;}
 .article-body{max-width:640px;}
-.article-body p{font-size:17px;color:var(--sub);line-height:2;font-weight:400;margin-bottom:24px;}
-.article-body h2{font-family:"Cormorant Garamond",serif;font-size:24px;font-weight:500;color:var(--text);margin:48px 0 20px;line-height:1.3;}
-.article-sidebar{padding-left:80px;}
-
-@media (max-width:768px){
+.article-body p{font-size:15px;color:var(--text);line-height:2;font-weight:400;margin-bottom:24px;}
+.article-body h2{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--text);margin:48px 0 20px;line-height:1.3;}
+.article-author{display:flex;align-items:center;gap:20px;padding:36px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin:48px 0;}
+.article-author-avatar{width:52px;height:52px;border-radius:50%;background:var(--peach);flex-shrink:0;}
+.article-author-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;color:var(--text);margin-bottom:4px;}
+.article-author-bio{font-size:12px;color:var(--light);font-weight:300;line-height:1.7;}
+.article-sidebar{padding-left:64px;}
+@media(max-width:768px){
   .article-layout{grid-template-columns:1fr;padding:32px 24px;gap:48px;}
-
   .article-sidebar{padding-left:0;border-top:1px solid var(--border);padding-top:40px;}
-  .article-body p{font-size:14px;}
+  .article-body p{font-size:15px;}
+}
+
+/* ── COMMENT ── */
+.comment-section{padding:56px;border-top:1px solid var(--border);}
+.comment-section h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;margin-bottom:28px;}
+.comment-form{display:flex;flex-direction:column;gap:16px;max-width:560px;}
+.comment-form input,.comment-form textarea{padding:12px 0;border:none;border-bottom:1px solid var(--border);background:transparent;font-size:13px;font-family:'Montserrat','Noto Sans TC',sans-serif;color:var(--text);outline:none;font-weight:300;}
+.comment-form textarea{resize:vertical;min-height:80px;}
+.comment-btn{align-self:flex-start;padding:10px 28px;background:transparent;color:var(--orange);border:1px solid rgba(216,107,62,0.4);border-radius:99px;font-size:10px;letter-spacing:0.3em;text-transform:uppercase;cursor:pointer;font-family:'Montserrat',sans-serif;transition:all 0.3s;}
+.comment-btn:hover{background:var(--orange);color:#fff;}
+@media(max-width:768px){.comment-section{padding:40px 24px;}}
+
+/* ── CONTACT PAGE ── */
+.contact-split{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border);}
+.contact-left{padding:80px 56px;border-right:1px solid var(--border);}
+.contact-left h2{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;line-height:1.2;margin-bottom:24px;}
+.contact-left h2 em{font-style:italic;color:var(--orange);}
+.contact-left p{font-size:14px;color:var(--sub);line-height:2;font-weight:300;margin-bottom:48px;}
+.contact-info-list{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--border);}
+.contact-info-row{display:flex;align-items:baseline;gap:32px;padding:14px 0;border-bottom:1px solid var(--border);}
+.contact-info-label{font-size:9px;letter-spacing:0.4em;text-transform:uppercase;color:var(--light);font-family:'Montserrat',sans-serif;min-width:80px;flex-shrink:0;}
+.contact-info-val{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:300;color:var(--text);}
+.contact-info-val a{color:var(--orange);text-decoration:none;font-style:italic;}
+.contact-right{padding:80px 56px;background:var(--bg);}
+.contact-right h3{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;margin-bottom:8px;}
+.contact-right p{font-size:13px;color:var(--light);font-weight:300;margin-bottom:40px;}
+.line-cta{display:flex;align-items:center;gap:16px;padding:24px 28px;background:#fff;border:1px solid var(--border);margin-bottom:24px;cursor:pointer;transition:border-color 0.3s;}
+.line-cta:hover{border-color:rgba(216,107,62,0.4);}
+.line-icon{width:40px;height:40px;background:#06C755;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.line-icon svg{width:24px;height:24px;fill:#fff;}
+.line-cta-text h4{font-size:14px;font-weight:500;color:var(--text);margin-bottom:2px;}
+.line-cta-text p{font-size:12px;color:var(--light);font-weight:300;margin-bottom:0;}
+.email-cta{display:flex;align-items:center;gap:16px;padding:20px 28px;border:1px solid var(--border);cursor:pointer;transition:border-color 0.3s;background:#fff;}
+.email-cta:hover{border-color:rgba(216,107,62,0.4);}
+.email-cta-icon{width:40px;height:40px;background:var(--orange);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;}
+.email-cta-text h4{font-size:14px;font-weight:500;color:var(--text);margin-bottom:2px;}
+.email-cta-text p{font-size:12px;color:var(--light);font-weight:300;margin-bottom:0;}
+@media(max-width:768px){
+  .contact-split{grid-template-columns:1fr;}
+  .contact-left{padding:48px 24px;border-right:none;border-bottom:1px solid var(--border);}
+  .contact-right{padding:48px 24px;}
 }
 
 /* ── CONTACT FOOTER ── */
-.contact-footer{border-top:1px solid var(--border);padding:80px 56px;}
-.cf-inner{max-width:900px;}
-.cf-title{font-family:"Cormorant Garamond",serif;font-size:44px;font-weight:300;font-style:italic;color:var(--text);margin-bottom:32px;}
-.cf-desc{font-size:15px;color:var(--sub);line-height:2;font-weight:300;max-width:640px;margin-bottom:56px;}
-.cf-list{display:flex;flex-direction:column;}
-.cf-row{display:flex;gap:40px;padding:6px 0;align-items:baseline;}
-.cf-label{font-size:11px;letter-spacing:0.4em;text-transform:uppercase;color:var(--light);font-family:"Montserrat",sans-serif;min-width:120px;flex-shrink:0;}
-.cf-val{font-family:"Cormorant Garamond",serif;font-size:17px;font-weight:300;color:var(--text);}
+.cf-footer{border-top:1px solid var(--border);padding:64px 56px;}
+.cf-title{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;font-style:italic;color:var(--text);margin-bottom:28px;}
+.cf-desc{font-size:14px;color:var(--sub);line-height:2;font-weight:300;max-width:600px;margin-bottom:48px;}
+.cf-rows{display:flex;flex-direction:column;}
+.cf-row{display:flex;gap:40px;padding:8px 0;align-items:baseline;}
+.cf-label{font-size:10px;letter-spacing:0.4em;text-transform:uppercase;color:var(--light);font-family:'Montserrat',sans-serif;min-width:120px;flex-shrink:0;}
+.cf-val{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:300;color:var(--text);}
 .cf-val a{color:var(--orange);text-decoration:none;font-style:italic;}
-@media (max-width:768px){
-  .contact-footer{padding:56px 24px;}
-  .cf-title{font-size:36px;}
-  .cf-row{gap:24px;}
+@media(max-width:768px){
+  .cf-footer{padding:48px 24px;}
+  .cf-row{gap:20px;}
   .cf-label{min-width:80px;}
 }
 
 /* ── FOOTER ── */
-footer{padding:32px 56px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
-footer p{font-size:11px;letter-spacing:0.4em;text-transform:uppercase;color:var(--light);font-family:'Montserrat',sans-serif;}
+footer{padding:28px 56px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
+footer p{font-size:10px;letter-spacing:0.4em;text-transform:uppercase;color:var(--light);font-family:'Montserrat',sans-serif;}
+@media(max-width:768px){footer{padding:20px 24px;flex-direction:column;gap:8px;text-align:center;}}
 
-/* ── COMMENT ── */
-.comment-section{padding:64px 56px;border-top:1px solid var(--border);}
-.comment-section h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;margin-bottom:32px;}
-.comment-form{display:flex;flex-direction:column;gap:16px;max-width:600px;margin-bottom:48px;}
-.comment-form input,.comment-form textarea{padding:14px 0;border:none;border-bottom:1px solid var(--border);background:transparent;font-size:13px;font-family:'Montserrat','Noto Sans TC',sans-serif;color:var(--text);outline:none;font-weight:300;}
-.comment-form textarea{resize:vertical;min-height:80px;}
-.comment-btn{align-self:flex-start;padding:10px 28px;background:transparent;color:var(--orange);border:1px solid rgba(216,107,62,0.4);border-radius:99px;font-size:10px;letter-spacing:0.3em;text-transform:uppercase;cursor:pointer;font-family:'Montserrat',sans-serif;transition:all 0.3s;}
-.comment-btn:hover{background:var(--orange);color:#fff;}
+/* ── CASE MODAL ── */
+.modal-overlay{position:fixed;inset:0;z-index:500;background:rgba(45,42,38,0.5);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;pointer-events:none;transition:opacity 0.4s ease;}
+.modal-overlay.open{opacity:1;pointer-events:all;}
+.modal-box{width:100%;max-width:640px;max-height:88vh;background:var(--bg);border:1px solid var(--border);overflow-y:auto;position:relative;transform:translateY(28px) scale(0.98);transition:transform 0.45s cubic-bezier(0.22,1,0.36,1);box-shadow:0 32px 80px -16px rgba(45,42,38,0.2);scrollbar-width:thin;scrollbar-color:var(--peach) transparent;}
+.modal-overlay.open .modal-box{transform:translateY(0) scale(1);}
+.modal-topline{height:2px;background:linear-gradient(90deg,var(--orange),var(--peach) 60%,var(--sage));}
+.modal-hero{padding:44px 52px 36px;background:#fff;border-bottom:1px solid var(--border);position:relative;overflow:hidden;}
+.modal-close{position:absolute;top:20px;right:20px;width:30px;height:30px;background:none;border:1px solid var(--border);cursor:pointer;transition:border-color 0.2s;}
+.modal-close:hover{border-color:var(--orange);}
+.modal-close::before,.modal-close::after{content:'';position:absolute;width:12px;height:1px;background:var(--light);top:50%;left:50%;transform-origin:center;}
+.modal-close::before{transform:translate(-50%,-50%) rotate(45deg);}
+.modal-close::after{transform:translate(-50%,-50%) rotate(-45deg);}
+.modal-no{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;color:var(--orange);letter-spacing:0.18em;margin-bottom:16px;display:block;}
+.modal-title{font-family:'Noto Serif TC','Cormorant Garamond',serif;font-weight:500;font-size:22px;line-height:1.7;color:var(--text);margin-bottom:20px;}
+.modal-title .hl{color:var(--orange);}
+.modal-tags{display:flex;gap:8px;}
+.modal-tag{font-size:9px;letter-spacing:0.35em;text-transform:uppercase;font-weight:600;padding:3px 11px;}
+.modal-tag--format{color:var(--orange);border:1px solid rgba(216,107,62,0.35);background:rgba(216,107,62,0.06);}
+.modal-tag--funnel{color:#7A6B30;border:1px solid rgba(249,194,88,0.5);background:rgba(249,194,88,0.12);}
+.modal-body{padding:44px 52px;}
+.modal-sec{margin-bottom:40px;}
+.modal-sec-header{display:flex;align-items:center;gap:14px;margin-bottom:18px;}
+.modal-sec-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;color:var(--orange);min-width:24px;}
+.modal-sec-label{font-size:9px;letter-spacing:0.5em;text-transform:uppercase;font-weight:600;color:var(--light);}
+.modal-sec-rule{flex:1;height:1px;background:var(--border);}
+.modal-sec-content{padding-left:38px;}
+.modal-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.modal-list li{font-size:14px;color:var(--sub);line-height:1.85;display:flex;gap:12px;align-items:flex-start;}
+.modal-list li::before{content:'';width:3px;height:3px;background:var(--peach);border-radius:50%;margin-top:10px;flex-shrink:0;}
+.modal-insight{background:rgba(216,107,62,0.04);border:1px solid rgba(216,107,62,0.12);border-left:2px solid var(--orange);padding:18px 22px;margin-bottom:16px;}
+.modal-insight-label{font-size:9px;letter-spacing:0.45em;text-transform:uppercase;color:var(--orange);font-weight:600;margin-bottom:8px;}
+.modal-insight-text{font-size:15px;color:var(--text);line-height:1.9;}
+.modal-strategy{margin-bottom:16px;}
+.modal-strategy-q{font-size:9px;letter-spacing:0.42em;text-transform:uppercase;color:var(--light);font-weight:600;margin-bottom:6px;}
+.modal-strategy-a{font-size:14px;color:var(--sub);line-height:1.9;}
+.modal-obs{background:rgba(184,194,168,0.1);border:1px solid rgba(184,194,168,0.3);border-left:2px solid var(--sage);padding:18px 22px;margin-bottom:16px;}
+.modal-obs-label{font-size:9px;letter-spacing:0.45em;text-transform:uppercase;color:#6B7A5E;font-weight:600;margin-bottom:8px;}
+.modal-obs-text{font-size:15px;color:var(--text);line-height:1.9;}
+.modal-reflection{font-size:15px;color:var(--sub);line-height:2;font-style:italic;padding:20px 24px;background:rgba(226,183,168,0.1);border-left:2px solid var(--peach);}
+.modal-footer{padding:0 52px 44px;display:flex;align-items:center;gap:16px;}
+.modal-footer-brand{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--light);letter-spacing:0.2em;}
+.modal-footer-line{flex:1;height:1px;background:linear-gradient(90deg,var(--border),transparent);}
 
+/* ── PROJECT PAGE ── */
+.proj-nav{padding:24px 56px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);}
+.proj-back{font-size:9px;letter-spacing:0.45em;text-transform:uppercase;font-weight:600;color:var(--light);background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:10px;font-family:'Montserrat',sans-serif;transition:color 0.3s;}
+.proj-back:hover{color:var(--orange);}
+.proj-back::before{content:'';width:18px;height:1px;background:currentColor;position:relative;}
+.proj-hero{max-width:860px;margin:0 auto;padding:72px 56px 56px;position:relative;}
+.proj-eyebrow{font-size:9px;letter-spacing:0.6em;text-transform:uppercase;color:var(--orange);font-weight:600;margin-bottom:20px;display:block;}
+.proj-title{font-family:'Noto Serif TC','Cormorant Garamond',serif;font-weight:500;font-size:32px;line-height:1.6;letter-spacing:0.05em;color:var(--text);margin-bottom:10px;}
+.proj-subtitle{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:var(--light);margin-bottom:48px;}
+.proj-meta{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:40px;}
+.proj-meta-item{background:#fff;padding:20px 24px;}
+.proj-meta-label{font-size:9px;letter-spacing:0.45em;text-transform:uppercase;color:var(--light);font-weight:600;margin-bottom:8px;}
+.proj-meta-val{font-size:14px;color:var(--text);line-height:1.7;}
+.proj-desc{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
+.proj-desc-block{}
+.proj-desc-label{font-size:9px;letter-spacing:0.5em;text-transform:uppercase;color:var(--light);font-weight:600;margin-bottom:12px;}
+.proj-desc-text{font-size:14px;color:var(--sub);line-height:1.9;font-weight:300;}
+.proj-desc-highlight .proj-desc-text{font-size:14px;color:var(--text);padding-left:16px;border-left:2px solid var(--orange);font-weight:400;}
 
+.proj-divider{max-width:860px;margin:0 auto;padding:0 56px;}
+.proj-divider-line{height:1px;background:linear-gradient(90deg,var(--orange),rgba(226,183,168,0.4),transparent);}
 
+.proj-works{max-width:860px;margin:0 auto;padding:56px;}
+.proj-works-label{font-size:9px;letter-spacing:0.6em;text-transform:uppercase;color:var(--orange);font-weight:600;margin-bottom:32px;display:block;}
+.proj-work-list{display:flex;flex-direction:column;border-top:1px solid var(--border);}
+.proj-work-row{display:flex;align-items:stretch;border-bottom:1px solid var(--border);cursor:pointer;transition:background 0.3s;position:relative;}
+.proj-work-row:hover{background:rgba(216,107,62,0.03);}
+.proj-work-no{width:64px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--border);padding:24px 0;}
+.proj-work-no span{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;color:var(--orange);writing-mode:vertical-rl;transform:rotate(180deg);}
+.proj-work-body{flex:1;padding:24px 28px;display:flex;flex-direction:column;gap:6px;}
+.proj-work-title{font-family:'Noto Serif TC',serif;font-weight:500;font-size:15px;color:var(--text);line-height:1.6;}
+.proj-work-focus{font-size:12px;color:var(--light);overflow:hidden;white-space:nowrap;text-overflow:ellipsis;max-width:440px;}
+.proj-work-tags{width:140px;flex-shrink:0;display:flex;flex-direction:column;align-items:flex-end;justify-content:center;gap:6px;padding:24px 16px;border-left:1px solid var(--border);}
+.proj-work-tag{font-size:9px;letter-spacing:0.3em;text-transform:uppercase;font-weight:600;padding:3px 8px;}
+.proj-work-tag--format{color:var(--orange);border:1px solid rgba(216,107,62,0.3);background:rgba(216,107,62,0.05);}
+.proj-work-tag--funnel{color:#7A6B30;border:1px solid rgba(249,194,88,0.45);background:rgba(249,194,88,0.1);}
+.proj-work-dim{opacity:0.4;cursor:default;}
 
+.proj-feedback{background:#fff;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.proj-feedback-inner{max-width:860px;margin:0 auto;padding:64px 56px;display:grid;grid-template-columns:1fr 2fr;gap:48px;align-items:start;}
+.proj-feedback-label{font-size:9px;letter-spacing:0.55em;text-transform:uppercase;color:var(--orange);font-weight:600;margin-bottom:14px;}
+.proj-feedback-client{font-size:15px;color:var(--text);line-height:1.7;margin-bottom:4px;}
+.proj-feedback-type{font-size:11px;letter-spacing:0.25em;color:var(--light);}
+.proj-feedback-quote{font-family:'Noto Serif TC',serif;font-size:16px;color:var(--text);line-height:2;font-style:italic;padding:24px 28px;background:var(--bg);border-left:2px solid var(--peach);position:relative;}
+.proj-feedback-quote::before{content:'"';font-family:'Cormorant Garamond',serif;font-size:64px;line-height:1;color:var(--peach);opacity:0.4;position:absolute;top:4px;left:16px;pointer-events:none;}
 
-
-
-/* ── PR BLOCK ── */
-.pr-block{display:grid;grid-template-columns:240px 1fr;gap:0;padding:56px;border-bottom:1px solid var(--border);}
-.pr-block-en{font-family:"Cormorant Garamond",serif;font-size:15px;font-style:italic;color:var(--text);margin-bottom:4px;font-weight:500;}
-.pr-block-name{font-family:"Cormorant Garamond",serif;font-size:26px;font-weight:400;color:var(--text);}
-.pr-block-right{padding-left:40px;border-left:1px solid var(--border);}
-.pr-block-price{font-size:17px;color:var(--sub);margin-bottom:24px;font-weight:300;}
-.pr-block-group-title{font-size:15px;color:var(--sub);margin-bottom:10px;margin-top:20px;font-weight:300;}
-.pr-block-group-title:first-of-type{margin-top:0;}
-.pr-block-list{list-style:disc;padding-left:18px;display:flex;flex-direction:column;gap:6px;margin-bottom:4px;}
-.pr-block-list li{font-size:15px;color:var(--sub);font-weight:300;line-height:1.7;}
-
-@media (max-width:768px){
-  .pr-block{grid-template-columns:1fr;padding:40px 24px;gap:24px;}
-  .pr-block-right{padding-left:0;border-left:none;border-top:1px solid var(--border);padding-top:24px;}
+@media(max-width:768px){
+  .proj-hero,.proj-works,.proj-divider,.proj-feedback-inner{padding-left:24px;padding-right:24px;}
+  .proj-title{font-size:24px;}
+  .proj-desc{grid-template-columns:1fr;}
+  .proj-meta{grid-template-columns:1fr;}
+  .proj-work-tags{display:none;}
+  .proj-feedback-inner{grid-template-columns:1fr;gap:24px;}
 }
 
-/* ── PR PLAN BLOCK ── */
-.pr-plan-block{border-bottom:1px solid var(--border);}
-.pr-plan-header{display:flex;justify-content:space-between;align-items:flex-end;padding:48px 56px 32px;}
-.pr-plan-left{}
-.pr-plan-en{font-family:"Cormorant Garamond",serif;font-size:14px;font-style:italic;color:var(--light);margin-bottom:6px;}
-.pr-plan-name{font-family:"Cormorant Garamond",serif;font-size:32px;font-weight:300;color:var(--text);}
-.pr-plan-price{font-family:"Cormorant Garamond",serif;font-size:38px;font-style:italic;color:var(--orange);font-weight:300;line-height:1;}
-.pr-plan-body{padding:0 56px 48px;}
-.pr-plan-list{list-style:none;border-top:1px solid var(--border);}
-.pr-plan-list li{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--border);font-size:13px;font-weight:300;color:var(--sub);}
-.pr-plan-list li strong{font-weight:500;color:var(--text);}
-.pr-bonus span,.pr-bonus strong{color:var(--orange) !important;}
-.pr-plan-footer{display:flex;align-items:center;gap:24px;margin-top:28px;}
-.pr-plan-note{font-size:11px;color:var(--light);}
-
-@media (max-width:768px){
-  .pr-plan-header{padding:36px 24px 24px;flex-direction:column;align-items:flex-start;gap:8px;}
-  .pr-plan-price{font-size:32px;}
-  .pr-plan-body{padding:0 24px 40px;}
+/* ── PF LIST ── */
+.pf-list{display:flex;flex-direction:column;border-top:1px solid var(--border);padding:0 56px;}
+.pf-list-item{display:flex;align-items:center;gap:40px;padding:24px 0;border-bottom:1px solid var(--border);cursor:pointer;transition:background 0.2s;}
+.pf-list-item:hover{background:var(--bg);}
+.pf-list-item:hover .pf-list-arrow{opacity:1;color:var(--orange);}
+.pf-list-industry{font-family:'Montserrat',sans-serif;font-size:9px;letter-spacing:0.4em;text-transform:uppercase;color:var(--orange);min-width:80px;flex-shrink:0;}
+.pf-list-desc{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:var(--text);flex:1;line-height:1.4;}
+.pf-list-item:hover .pf-list-desc{color:var(--orange);}
+.pf-list-arrow{font-size:16px;color:var(--light);opacity:0;transition:opacity 0.2s;}
+@media(max-width:768px){
+  .pf-list{padding:0 24px;}
+  .pf-list-desc{font-size:18px;}
+  .pf-list-arrow{display:none;}
 }
 
-/* ── PR PLANS ── */
-.pr-plans{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
-.pr-plan{padding:56px;border-right:1px solid var(--border);}
-.pr-plan:last-child{border-right:none;}
-.pr-plan-en{font-family:"Cormorant Garamond",serif;font-size:14px;font-style:italic;color:var(--light);margin-bottom:6px;}
-.pr-plan-name{font-family:"Cormorant Garamond",serif;font-size:28px;font-weight:300;color:var(--text);margin-bottom:12px;}
-.pr-plan-price{font-family:"Cormorant Garamond",serif;font-size:38px;font-style:italic;color:var(--orange);font-weight:300;margin-bottom:32px;line-height:1;}
-.pr-plan-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:32px;}
-.pr-plan-list li{font-size:13px;color:var(--sub);font-weight:300;padding-bottom:12px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
-.pr-plan-list li:last-child{border-bottom:none;}
-.pr-plan-list strong{font-weight:500;color:var(--text);}
-.pr-bonus{color:var(--orange) !important;font-weight:400 !important;}
-.pr-plan-note{font-size:10px;color:var(--light);margin-bottom:24px;letter-spacing:0.05em;}
-@media (max-width:768px){
-  .pr-plans{grid-template-columns:1fr;}
-  .pr-plan{padding:40px 24px;border-right:none;border-bottom:1px solid var(--border);}
-  .pr-plan:last-child{border-bottom:none;}
-}
+/* ── PF TEXT CARD ── */
+.pf-img-card{width:100%;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding:28px;background:var(--bg);position:relative;overflow:hidden;min-height:200px;}
+.pf-img-card::before{content:'';position:absolute;inset:0;pointer-events:none;}
+.pf-img-card-geo{position:absolute;inset:0;pointer-events:none;opacity:0.08;}
+.pf-img-card-industry{font-family:'Montserrat',sans-serif;font-size:9px;letter-spacing:0.5em;text-transform:uppercase;color:var(--orange);margin-bottom:12px;position:relative;z-index:1;}
+.pf-img-card-desc{font-family:'Noto Serif TC','Cormorant Garamond',serif;font-size:18px;font-weight:400;color:var(--text);line-height:1.6;letter-spacing:0.04em;position:relative;z-index:1;}
+.pf-img-card-hint{font-size:9px;letter-spacing:0.3em;text-transform:uppercase;color:var(--orange);font-family:'Montserrat',sans-serif;margin-top:16px;opacity:0;transition:opacity 0.3s;position:relative;z-index:1;}
+.pf-item:hover .pf-img-card-hint{opacity:1;}
 
-/* ── PRICING PAGE ── */
-.pr-header{padding:0 56px;}
-.pr-table{padding:0 56px 80px;}
-.pr-title-row{border-bottom:2px solid var(--text) !important;}
-.pr-row{display:grid;grid-template-columns:240px 1fr 1fr;border-bottom:1px solid var(--border);}
-.pr-label{font-size:13px;color:var(--sub);padding:16px 0;font-weight:300;}
-.pr-col{padding:16px 32px;font-size:13px;color:var(--sub);font-weight:300;border-left:1px solid var(--border);}
-.pr-col-featured{background:var(--bg);}
-.pr-plan-en{font-family:"Cormorant Garamond",serif;font-size:12px;font-style:italic;color:var(--light);margin-bottom:4px;}
-.pr-plan-name{font-family:"Cormorant Garamond",serif;font-size:26px;font-weight:400;color:var(--text);margin-bottom:6px;}
-.pr-plan-price{font-family:"Cormorant Garamond",serif;font-size:32px;font-style:italic;color:var(--orange);font-weight:300;}
-.pr-group{margin-bottom:0;}
-.pr-group-last{border-bottom:none;}
-.pr-group-title{font-size:10px;letter-spacing:0.4em;text-transform:uppercase;color:var(--light);font-family:"Montserrat",sans-serif;padding:28px 0 12px;border-bottom:1px solid var(--border);}
-.pr-cta-row{border-bottom:none;padding-top:8px;}
-.pr-section{padding:56px 56px 0;}
-.pr-section:last-child{padding-bottom:80px;}
-.pr-section-title{font-size:11px;letter-spacing:0.4em;text-transform:uppercase;color:var(--light);font-family:"Montserrat",sans-serif;padding-bottom:24px;border-bottom:2px solid var(--text);margin-bottom:0;}
-.pr-service-item{padding:28px 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:240px 1fr;gap:40px;align-items:start;}
-.pr-service-item:last-child{border-bottom:none;}
-.pr-service-name{font-family:"Cormorant Garamond",serif;font-size:20px;font-weight:400;color:var(--text);}
-.pr-service-desc{font-size:15px;color:var(--light);line-height:1.9;font-weight:300;}
-
-@media (max-width:768px){
-  .pr-header,.pr-table,.pr-section{padding-left:24px;padding-right:24px;}
-  .pr-row{grid-template-columns:1fr 1fr;}
-  .pr-label{display:none;}
-  .pr-col{padding:14px 16px;font-size:12px;}
-  .pr-group-title{padding-left:0;}
-  .pr-service-item{grid-template-columns:1fr;gap:10px;}
-  .pr-plan-price{font-size:24px;}
-}
-/* ── SPEC LIST ── */
-.spec-list{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--border);border-left:1px solid var(--border);}
-.spec-item{padding:40px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);}
-.spec-title{font-family:"Cormorant Garamond",serif;font-size:22px;font-weight:400;color:var(--text);margin-bottom:12px;}
-.spec-desc{font-size:15px;color:var(--light);line-height:1.9;font-weight:300;}
-.svc-plan-en{font-family:"Cormorant Garamond",serif;font-size:13px;font-style:italic;color:var(--light);margin-bottom:4px;}
-@media (max-width:768px){
-  .spec-list{grid-template-columns:1fr;}
-  .spec-item{border-left:none;border-right:none;}
-}
-/* ── HAMBURGER ── */
-.hamburger{display:none;background:none;border:none;font-size:22px;cursor:pointer;color:var(--text);padding:4px;line-height:1;}
-@media (max-width: 768px) {
-  .hamburger{display:block;}
-  .nav-links{display:none;flex-direction:column;position:absolute;top:56px;left:0;right:0;background:#fff;border-bottom:1px solid var(--border);padding:16px 24px;gap:0;z-index:9999;}
-  .nav-links.open{display:flex;}
-  .nav-links a{display:block;font-size:14px;letter-spacing:0.15em;padding:14px 0;border-bottom:1px solid var(--border);color:var(--sub);}
-  .nav-links a:last-child{border-bottom:none;}
-}
-/* ── RWD MOBILE ── */
-@media (max-width: 768px) {
-  nav{padding:14px 24px;}
-  .nav-cta{padding:6px 12px !important;}
-
-  .hero{padding:60px 24px 48px;}
-  .hero h1{font-size:32px;}
-  .hero-sub{font-size:13px;}
-
-  .section{padding:56px 24px;}
-  .section-alt{padding:56px 24px;}
-  .svc-section{padding:48px 24px;}
-  .sec-divider{margin:0 24px;}
-  .block-label{margin-bottom:32px;}
-
-  /* Cases */
-  .case-filter{padding:0 24px;}
-  .pf-grid{grid-template-columns:1fr;gap:32px;padding:40px 24px;}
-
-  /* Industry */
-  .industry-grid{grid-template-columns:1fr 1fr;}
-  .industry-item{padding:32px 24px;}
-
-  /* Services compare */
-  .svc-plan-row{grid-template-columns:1fr 1fr;gap:0;}
-  .svc-plan-label{display:none;}
-  .svc-plan-card{padding:24px 20px;}
-  .svc-plan-price{font-size:26px;}
-  .svc-compare-row{grid-template-columns:1fr 1fr;min-height:auto;}
-  .svc-compare-title{grid-template-columns:1fr 1fr;}
-  .svc-compare-title::before{display:none;}
-  .svc-compare-label{display:none;}
-  .svc-compare-val{padding:12px 16px;font-size:12px;}
-
-  /* Services detail */
-  .svc-detail-list{grid-template-columns:1fr;}
-  .svc-detail-item{padding:32px 0;border-left:none;border-right:none;}
-
-  /* Flow */
-  .svc-flow{flex-direction:column;align-items:flex-start;gap:0;}
-  .svc-flow-item{display:flex;align-items:center;gap:16px;}
-  .svc-flow-item .svc-flow-num{font-size:24px;margin-bottom:0;min-width:40px;}
-  .svc-flow-arrow{transform:rotate(90deg);padding:4px 0 4px 20px;margin-bottom:0;}
-
-  /* Pricing */
-  .plans-grid{grid-template-columns:1fr;}
-  .plan-card{border-right:1px solid var(--border);border-bottom:none;}
-  .plan-card:last-child{border-bottom:1px solid var(--border);}
-
-  /* Process */
-  .proc-item{grid-template-columns:48px 1fr;gap:20px;}
-  .proc-item>p{grid-column:1/-1;}
-
-  /* Equip */
-  .equip-row{flex-wrap:wrap;}
-  .equip-item{flex:0 0 50%;border-bottom:1px solid var(--border);}
-
-  /* Blog */
-  .blog-filter{padding:0 24px;}
-  .blog-grid{grid-template-columns:1fr;padding:32px 24px;}
-  .blog-sidebar{padding:32px 24px;}
-  .subscribe-box{padding:32px 24px;}
-
-  /* Contact */
-  .contact-grid{grid-template-columns:1fr;}
-  .contact-form{border-left:none;border-top:1px solid var(--border);padding:40px 24px;}
-  .contact-info{padding:40px 24px;}
-
-  /* Feat grid */
-  .feat-grid{grid-template-columns:1fr;}
-
-  /* Stats */
-  .stats-row{grid-template-columns:1fr;}
-  .stat-item{border-right:none;border-bottom:1px solid var(--border);}
-
-  footer{padding:24px;flex-direction:column;gap:8px;text-align:center;}
-}
-
-@media (max-width: 480px) {
-  .hero h1{font-size:26px;}
-  .industry-grid{grid-template-columns:1fr;}
-  .svc-plan-row{grid-template-columns:1fr;}
-  .svc-compare-row{grid-template-columns:1fr;}
-  .svc-compare-title{grid-template-columns:1fr;}
-  .equip-item{flex:0 0 100%;}
+/* ── FLOAT BTNS ── */
+.float-btns{position:fixed;bottom:28px;right:28px;display:flex;flex-direction:column;gap:10px;z-index:999;}
+.float-btn{display:flex;align-items:center;gap:8px;padding:10px 16px;border-radius:99px;font-size:10px;letter-spacing:0.2em;font-family:'Montserrat',sans-serif;font-weight:600;text-decoration:none;box-shadow:0 4px 20px rgba(45,42,38,0.12);transition:all 0.3s;white-space:nowrap;}
+.float-btn--fb{background:#fff;color:var(--text);border:1px solid var(--border);}
+.float-btn--fb:hover{border-color:var(--orange);color:var(--orange);}
+.float-btn--line{background:var(--orange);color:#fff;border:1px solid var(--orange);}
+.float-btn--line:hover{background:#c55a2e;}
+.float-btn-icon{font-size:13px;line-height:1;}
+@media(max-width:768px){
+  .float-btns{bottom:20px;right:16px;}
+  .float-btn span.float-btn-label{display:none;}
+  .float-btn{padding:12px;border-radius:50%;width:44px;height:44px;justify-content:center;}
+  .float-btn-icon{font-size:16px;}
 }
 </style>
 </head>
@@ -535,88 +446,284 @@ footer p{font-size:11px;letter-spacing:0.4em;text-transform:uppercase;color:var(
 
 <!-- NAV -->
 <nav>
-  <a class="logo" href="#" onclick="showPage('cases')">Betty Tzeng<span>Social Media Plan</span></a>
+  <a class="logo" onclick="showPage('home')">Betty Tzeng<span>Social Media Plan</span></a>
   <button class="hamburger" id="hamburger">☰</button>
   <div class="nav-links" id="nav-menu">
-    <a id="nav-cases" class="active" onclick="showPage('cases');closeMenu()">客戶案例</a>
-    <a id="nav-services" onclick="showPage('services');closeMenu()">費用參考</a>
-    
+    <a id="nav-home" class="active" onclick="showPage('home');closeMenu()">關於</a>
+    <a id="nav-portfolio" onclick="showPage('portfolio');closeMenu()">客戶案例</a>
+    <a id="nav-pricing" onclick="showPage('pricing');closeMenu()">費用參考</a>
     <a id="nav-blog" onclick="showPage('blog');closeMenu()">部落格</a>
-    <a id="nav-contact" class="nav-cta" onclick="showPage('contact');closeMenu()">諮詢</a>
+    <a id="nav-contact" class="nav-cta" onclick="showPage('contact');closeMenu()">加 Line 諮詢</a>
   </div>
 </nav>
 
-<!-- ══════════════════════════════════════════
-     PAGE 1：客戶案例（首頁）
-══════════════════════════════════════════ -->
-<div id="page-cases" class="page active">
+<!-- ══ PAGE: HOME ══ -->
+<div id="page-home" class="page active">
+
+  <!-- 區塊1：Hero -->
   <div class="hero">
-    <h1>Portfolio <em>· 客戶案例</em></h1>
+    <div>
+      <span class="hero-eyebrow">Social Media Plan</span>
+      <h1>我幫你想清楚要說什麼，<br>然後<em>陪你把它拍出來。</em></h1>
+      <p class="hero-sub">大多數人以為短影音是拍攝問題。但真正的問題是：你在對誰說話？我的工作，是在拍攝之前就把這件事想清楚。</p>
+    </div>
   </div>
 
-  <div class="case-filter">
-    <button class="filter-tab active" onclick="filterCases(this,'all')">全部</button>
-    <button class="filter-tab" onclick="filterCases(this,'hair')">美髮</button>
-    <button class="filter-tab" onclick="filterCases(this,'fitness')">健身</button>
-    <button class="filter-tab" onclick="filterCases(this,'medical')">醫美</button>
-    <button class="filter-tab" onclick="filterCases(this,'edu')">教育訓練</button>
+  <!-- 區塊2+3：工作方式 -->
+  <div class="home-process">
+    <div class="process-header">
+      <h2>我的<em>工作方式</em></h2>
+    </div>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="process-step-num">01</div>
+        <h3 class="process-step-title">受眾洞察</h3>
+        <p class="process-step-desc">找出你的客戶是誰、他們的痛點、渴望與抗拒，建立完整的受眾輪廓表。</p>
+        <div class="process-step-arrow"></div>
+      </div>
+      <div class="process-step">
+        <div class="process-step-num">02</div>
+        <h3 class="process-step-title">內容策略</h3>
+        <p class="process-step-desc">根據品牌定位設計主題選單，每支影片都有明確的引流、信任或轉換目標。</p>
+        <div class="process-step-arrow"></div>
+      </div>
+      <div class="process-step">
+        <div class="process-step-num">03</div>
+        <h3 class="process-step-title">引導式拍攝</h3>
+        <p class="process-step-desc">不需要背稿或演戲。透過訪談引導，讓你在鏡頭前最自然、最有說服力。</p>
+        <div class="process-step-arrow"></div>
+      </div>
+      <div class="process-step">
+        <div class="process-step-num">04</div>
+        <h3 class="process-step-title">後製交付</h3>
+        <p class="process-step-desc">剪輯、字幕、配樂、視覺設計，輸出 1080p 高清影片，符合各平台規格。</p>
+      </div>
+    </div>
   </div>
 
-  <div class="pf-grid">
-    <div class="pf-item" data-cat="hair">
-      <div class="pf-img"><div class="pf-img-placeholder"></div></div>
-      <div class="pf-info">
-        <h3 class="pf-title">頭皮護理專家的品牌磁場</h3>
-        <p class="pf-type">美髮</p>
-        <p class="pf-client">設計師 A｜2025</p>
-        <p class="pf-desc">從不敢開口到每月穩定產出 3 支</p>
+  <!-- 區塊4：為什麼找 Betty -->
+  <div class="home-diff">
+    <div class="diff-left">
+      <h2>為什麼<br>找<em>Betty</em>？</h2>
+      <p>我在台灣短影音市場做了超過 30 個專案，發現一件事：大多數客戶真正缺的，不是「更好的影片」，而是「更清楚的品牌語言」。</p>
+    </div>
+    <div class="diff-right">
+      <div class="diff-item">
+        <span class="diff-item-mark">—</span>
+        <p class="diff-item-text"><strong>從品牌規劃出發</strong>，不是從鏡頭出發。每個專案都從受眾洞察開始，影片是最後的交付物。</p>
       </div>
-    </div>
-    <div class="pf-item" data-cat="edu">
-      <div class="pf-img"><div class="pf-img-placeholder"></div></div>
-      <div class="pf-info">
-        <h3 class="pf-title">學院品牌故事系列</h3>
-        <p class="pf-type">教育訓練</p>
-        <p class="pf-client">美容培訓學院｜2025</p>
-        <p class="pf-desc">3 支影片帶來 12 位課程詢問</p>
+      <div class="diff-item">
+        <span class="diff-item-mark">—</span>
+        <p class="diff-item-text"><strong>跨產業實戰經驗</strong>——美髮、健身、醫美、教育訓練，理解不同產業的受眾語言。</p>
       </div>
-    </div>
-    <div class="pf-item" data-cat="brand">
-      <div class="pf-img"><div class="pf-img-placeholder"></div></div>
-      <div class="pf-info">
-        <h3 class="pf-title">設計師的第一支影片</h3>
-        <p class="pf-type">品牌故事</p>
-        <p class="pf-client">個人工作室｜2025</p>
-        <p class="pf-desc">從零開始建立個人品牌</p>
+      <div class="diff-item">
+        <span class="diff-item-mark">—</span>
+        <p class="diff-item-text"><strong>引導式拍攝</strong>，不需背稿。讓你在鏡頭前展現真實的專業魅力，而不是在「表演」。</p>
       </div>
-    </div>
-    <div class="pf-item" data-cat="hair">
-      <div class="pf-img"><div class="pf-img-placeholder"></div></div>
-      <div class="pf-info">
-        <h3 class="pf-title">染髮技術的專業定位</h3>
-        <p class="pf-type">美髮</p>
-        <p class="pf-client">髮廊品牌｜2024</p>
-        <p class="pf-desc">主題聚焦後觀看率提升 3 倍</p>
+      <div class="diff-item">
+        <span class="diff-item-mark">—</span>
+        <p class="diff-item-text"><strong>一人工作室</strong>，你接觸的從頭到尾都是我，沒有助理代勞、沒有中間傳話。</p>
       </div>
-    </div>
-    <div class="pf-item pf-empty" data-cat="beauty">
-      <div class="pf-img" style="display:flex;align-items:center;justify-content:center;background:var(--bg);"><p style="font-size:12px;color:var(--light);font-weight:300;">上傳截圖後替換</p></div>
-      <div class="pf-info"><h3 class="pf-title" style="color:var(--light);">美容案例</h3><p class="pf-type">美容</p></div>
-    </div>
-    <div class="pf-item pf-empty" data-cat="beauty">
-      <div class="pf-img" style="display:flex;align-items:center;justify-content:center;background:var(--bg);"><p style="font-size:12px;color:var(--light);font-weight:300;">上傳截圖後替換</p></div>
-      <div class="pf-info"><h3 class="pf-title" style="color:var(--light);">美容案例</h3><p class="pf-type">美容</p></div>
     </div>
   </div>
 
 </div>
 
-<!-- ══════════════════════════════════════════
-     PAGE 2：費用參考
-══════════════════════════════════════════ -->
-<div id="page-services" class="page">
+
+
+<!-- ══ PROJECT：美髮設計師 ══ -->
+<div id="page-project-hair" class="page">
+
+  <div class="proj-nav">
+    <span class="proj-back" onclick="showPage('portfolio')">返回作品集</span>
+    <span class="logo">Betty Tzeng</span>
+  </div>
+
+  <div class="proj-hero">
+    <span class="proj-eyebrow">Project · 美髮設計師品牌</span>
+    <h1 class="proj-title">讓專業開始被看見，<br>從輕鬆的影片開始。</h1>
+    <p class="proj-subtitle">Content Strategy for Hair Designer</p>
+
+    <div class="proj-meta">
+      <div class="proj-meta-item">
+        <p class="proj-meta-label">客戶類型</p>
+        <p class="proj-meta-val">美髮設計師・個人品牌</p>
+      </div>
+      <div class="proj-meta-item">
+        <p class="proj-meta-label">合作內容</p>
+        <p class="proj-meta-val">短影音企劃・內容策略規劃</p>
+      </div>
+    </div>
+
+    <div class="proj-desc">
+      <div class="proj-desc-block">
+        <p class="proj-desc-label">遇到的問題</p>
+        <p class="proj-desc-text">擁有豐富的專業技術與多年經驗，但在社群上的存在感遠低於實力水準。影片做了不少，留言多是客套的「謝謝分享」，卻少有真正被打中的共鳴回應。</p>
+      </div>
+      <div class="proj-desc-block proj-desc-highlight">
+        <p class="proj-desc-label">我們的切入點</p>
+        <p class="proj-desc-text">問題不在技術，而在敘事角度——內容一直在說「我有多厲害」，卻沒有說「你是不是也有這個困擾」。策略調整的核心，是把主角從設計師換成觀眾。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="proj-divider"><div class="proj-divider-line"></div></div>
+
+  <div class="proj-works">
+    <span class="proj-works-label">精選影片企劃分析</span>
+    <div class="proj-work-list">
+
+      <div class="proj-work-row" onclick="openProjectModal('proj-modal-01')">
+        <div class="proj-work-no"><span>Video.01</span></div>
+        <div class="proj-work-body">
+          <p class="proj-work-title">明明比別人努力，為什麼被看見的總不是你？</p>
+          <p class="proj-work-focus">勤奮是標配，會表達才是你的加速器。</p>
+        </div>
+        <div class="proj-work-tags">
+          <span class="proj-work-tag proj-work-tag--format">短影音</span>
+          <span class="proj-work-tag proj-work-tag--funnel">引流</span>
+        </div>
+      </div>
+
+      <div class="proj-work-row" onclick="openProjectModal('proj-modal-02')">
+        <div class="proj-work-no"><span>Video.02</span></div>
+        <div class="proj-work-body">
+          <p class="proj-work-title">顛峰級收吹風機</p>
+          <p class="proj-work-focus">萬元家電的損壞往往來自日常不經意的折線習慣，必須立刻停止錯誤動作。</p>
+        </div>
+        <div class="proj-work-tags">
+          <span class="proj-work-tag proj-work-tag--format">短影音</span>
+          <span class="proj-work-tag proj-work-tag--funnel">引流</span>
+        </div>
+      </div>
+
+      <div class="proj-work-row proj-work-dim">
+        <div class="proj-work-no"><span>Video.03</span></div>
+        <div class="proj-work-body">
+          <p class="proj-work-title" style="color:var(--light);">即將加入 ...</p>
+          <p class="proj-work-focus">—</p>
+        </div>
+        <div class="proj-work-tags">
+          <span class="proj-work-tag proj-work-tag--format" style="opacity:0.4;">短影音</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="proj-divider"><div class="proj-divider-line"></div></div>
+
+  <div class="proj-feedback">
+    <div class="proj-feedback-inner">
+      <div>
+        <p class="proj-feedback-label">客戶回饋</p>
+        <p class="proj-feedback-client">某美髮設計師</p>
+        <p class="proj-feedback-type">個人品牌創作者</p>
+      </div>
+      <div>
+        <p class="proj-feedback-quote">合作之前我以為自己的問題是不會拍影片，合作之後才發現，我根本不知道怎麼跟觀眾說話。她幫我找到了那個語言。</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Project Modal 01 -->
+<div class="modal-overlay" id="proj-modal-01" onclick="if(event.target===this)closeProjectModal('proj-modal-01')">
+  <div class="modal-box">
+    <div class="modal-topline"></div>
+    <div class="modal-hero">
+      <button class="modal-close" onclick="closeProjectModal('proj-modal-01')"></button>
+      <span class="modal-no">No. 01 · Content Work</span>
+      <h2 class="modal-title">明明比別人努力，<br>為什麼被看見的<span class="hl">總不是你？</span></h2>
+      <div class="modal-tags">
+        <span class="modal-tag modal-tag--format">短影音</span>
+        <span class="modal-tag modal-tag--funnel">引流漏斗</span>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section"><div class="modal-section-header"><span class="modal-section-num">01</span><span class="modal-section-label">案例背景</span><div class="modal-section-rule"></div></div><div class="modal-section-content"><ul class="modal-detail-list"><li>客戶類型：個人品牌創作者，長期深耕某領域，有豐富的實戰經驗</li><li>遇到的問題：影片做了很多，但觸及率始終上不去，覺得自己的努力沒有被看見</li><li>原本的假設：以為是拍攝技術或剪輯不夠好</li></ul></div></div>
+      <div class="modal-section"><div class="modal-section-header"><span class="modal-section-num">02</span><span class="modal-section-label">我的觀察</span><div class="modal-section-rule"></div></div><div class="modal-section-content"><div class="modal-insight"><p class="modal-insight-label">真正卡住的地方</p><p class="modal-insight-text">他卡住的不是拍攝技術，而是敘事——不知道怎麼把「我很努力」這件事，轉化成讓觀眾覺得「這說的就是我」的語言。</p></div><ul class="modal-detail-list"><li>內容以「我怎麼做」為主角，而非「你有什麼問題」</li><li>缺乏一個能讓觀眾在前三秒就停下來的情緒鉤子</li></ul></div></div>
+      <div class="modal-section"><div class="modal-section-header"><span class="modal-section-num">03</span><span class="modal-section-label">策略調整</span><div class="modal-section-rule"></div></div><div class="modal-section-content"><div class="modal-strategy"><p class="modal-strategy-q">怎麼設計</p><p class="modal-strategy-a">把開場從「分享心得」改為「點出痛點」——先讓觀眾感到被說中，再引入解法。</p></div><div class="modal-strategy"><p class="modal-strategy-q">為什麼這樣設計</p><p class="modal-strategy-a">引流型內容的核心邏輯是：讓對的人看見「這個人懂我」，建立信任感，而不是展示自己有多厲害。</p></div></div></div>
+      <div class="modal-section"><div class="modal-section-header"><span class="modal-section-num">04</span><span class="modal-section-label">上線後的觀察</span><div class="modal-section-rule"></div></div><div class="modal-section-content"><div class="modal-observation"><p class="modal-observation-label">我注意到的轉變</p><p class="modal-observation-text">留言區開始出現以前沒有的回應——不是「謝謝分享」，而是「這說的就是我」。觀眾從旁觀者變成了對話者。</p></div><ul class="modal-detail-list"><li>客戶第一次感受到內容在「跟對的人說話」，而不只是在播放</li><li>這支片讓她開始相信：表達方式的改變，比拍攝技術更關鍵</li></ul></div></div>
+      <div class="modal-section"><div class="modal-section-header"><span class="modal-section-num">05</span><span class="modal-section-label">我的反思</span><div class="modal-section-rule"></div></div><div class="modal-section-content"><p class="modal-reflection">這個案例讓我更確認一件事：努力本身不是內容，努力背後那個「你也有這種感覺嗎」才是。幫助創作者找到那個轉化的語言，是我最想做的事。</p></div></div>
+    </div>
+    <div class="modal-footer"><span class="modal-footer-brand">Betty Tzeng</span><div class="modal-footer-line"></div></div>
+  </div>
+</div>
+
+<!-- Project Modal 02 -->
+<div class="modal-overlay" id="proj-modal-02" onclick="if(event.target===this)closeProjectModal('proj-modal-02')">
+  <div class="modal-box">
+    <div class="modal-topline"></div>
+    <div class="modal-hero">
+      <button class="modal-close" onclick="closeProjectModal('proj-modal-02')"></button>
+      <span class="modal-no">No. 02 · Content Work</span>
+      <h2 class="modal-title">顛峰級收<span class="hl">吹風機</span></h2>
+      <div class="modal-tags">
+        <span class="modal-tag modal-tag--format">短影音</span>
+        <span class="modal-tag modal-tag--funnel">引流漏斗</span>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section"><div class="modal-section-header"><span class="modal-section-num">01</span><span class="modal-section-label">案例背景</span><div class="modal-section-rule"></div></div><div class="modal-section-content"><ul class="modal-detail-list"><li>客戶類型：美髮設計師，日常高頻率使用專業吹風機</li><li>吹風機是美髮師最常接觸的工具之一，部分機型售價破萬</li><li>收納習慣不良容易造成線材折損，大幅縮短吹風機壽命</li></ul></div></div>
+      <div class="modal-section"><div class="modal-section-header"><span class="modal-section-num">02</span><span class="modal-section-label">我的觀察</span><div class="modal-section-rule"></div></div><div class="modal-section-content"><div class="modal-insight"><p class="modal-insight-label">真正卡住的地方</p><p class="modal-insight-text">問題不是客戶不在乎工具，而是「錯誤習慣」太日常、太自然，根本不覺得自己做錯了。恐懼共鳴才能打破這個慣性。</p></div><ul class="modal-detail-list"><li>核心主軸：點出錯誤習慣，引發「我也這樣做！」的恐懼共鳴</li><li>觀眾在意的不是收納技巧，而是「我的吹風機還救得回來嗎？」</li></ul></div></div>
+      <div class="modal-section"><div class="modal-section-header"><span class="modal-section-num">03</span><span class="modal-section-label">策略設計</span><div class="modal-section-rule"></div></div><div class="modal-section-content"><div class="modal-strategy"><p class="modal-strategy-q">怎麼設計</p><p class="modal-strategy-a">開場直接示範「最常見的錯誤動作」——讓觀眾在前三秒對號入座，產生「這不就是我嗎」的停頓感。</p></div><div class="modal-strategy"><p class="modal-strategy-q">為什麼這樣設計</p><p class="modal-strategy-a">引流內容需要製造「我需要繼續看」的理由。恐懼比好奇更能讓人停下來——先讓觀眾感到緊張，再給出解法，完成一次完整的情緒弧線。</p></div></div></div>
+      <div class="modal-section"><div class="modal-section-header"><span class="modal-section-num">04</span><span class="modal-section-label">上線後的觀察</span><div class="modal-section-rule"></div></div><div class="modal-section-content"><div class="modal-observation"><p class="modal-observation-label">我注意到的轉變</p><p class="modal-observation-text">觀眾的留言從「謝謝教學」變成「天啊我都這樣做！」——這個轉變說明內容成功觸發了情緒，而不只是傳遞資訊。</p></div><ul class="modal-detail-list"><li>客戶開始理解：引流內容的目的不是「教會」觀眾，而是「讓觀眾覺得被說中」</li><li>這支片為後續的深度教學內容建立了受眾基礎</li></ul></div></div>
+      <div class="modal-section"><div class="modal-section-header"><span class="modal-section-num">05</span><span class="modal-section-label">我的反思</span><div class="modal-section-rule"></div></div><div class="modal-section-content"><p class="modal-reflection">日常習慣類的內容，往往被做成「教學」，但真正有力量的切入點是「你以為沒問題，其實問題很大」。恐懼共鳴不是在嚇人，而是幫觀眾看見自己的盲點。</p></div></div>
+    </div>
+    <div class="modal-footer"><span class="modal-footer-brand">Betty Tzeng</span><div class="modal-footer-line"></div></div>
+  </div>
+</div>
+
+<!-- ══ PAGE: PORTFOLIO ══ -->
+<div id="page-portfolio" class="page">
   <div class="hero">
-    <h1>Pricing <em>· 費用參考</em></h1>
+    <h1>Portfolio <em>· 客戶案例</em></h1>
+  </div>
+
+  <div class="pf-filter">
+    <button class="filter-tab active" onclick="filterPf(this,'all')">全部</button>
+    <button class="filter-tab" onclick="filterPf(this,'hair')">美髮</button>
+    <button class="filter-tab" onclick="filterPf(this,'fitness')">健身</button>
+    <button class="filter-tab" onclick="filterPf(this,'medical')">醫美</button>
+    <button class="filter-tab" onclick="filterPf(this,'edu')">教育訓練</button>
+  </div>
+
+  <div class="pf-list">
+
+    <div class="pf-list-item" data-cat="hair" onclick="showPage('project-hair')">
+      <span class="pf-list-industry">美髮</span>
+      <p class="pf-list-desc">25歲開了五間髮廊的超級女老闆</p>
+      <span class="pf-list-arrow">→</span>
+    </div>
+
+    <div class="pf-list-item" data-cat="hair">
+      <span class="pf-list-industry">美髮</span>
+      <p class="pf-list-desc">決定在彰化打造出高質感沙龍的女老闆</p>
+      <span class="pf-list-arrow">→</span>
+    </div>
+
+    
+
+    <div class="pf-list-item" data-cat="brand">
+      <span class="pf-list-industry">品牌故事</span>
+      <p class="pf-list-desc">設計師的第一支影片</p>
+      <span class="pf-list-arrow">→</span>
+    </div>
+
+    
+
+  </div>
+</div>
+
+<!-- ══ PAGE: PRICING ══ -->
+<div id="page-pricing" class="page">
+  <div class="hero">
+    <div>
+      <span class="hero-eyebrow">Pricing · 費用參考</span>
+      <h1>你買的不是<em>影片</em>，<br>是品牌被看見的方式。</h1>
+    </div>
   </div>
 
   <!-- 方案 1 -->
@@ -624,21 +731,21 @@ footer p{font-size:11px;letter-spacing:0.4em;text-transform:uppercase;color:var(
     <div class="pr-block-left">
       <p class="pr-block-en">Three Video</p>
       <p class="pr-block-name">試拍方案</p>
+      <p class="pr-block-tagline">找到品牌內容的第一個切入點</p>
+      <p class="pr-block-price">NT$ 10,000</p>
     </div>
     <div class="pr-block-right">
-      <p class="pr-block-price">價格：NT$ 10,000</p>
-
+      <p class="pr-block-intro">適合想嘗試短影音、但還不確定方向的品牌主。從受眾洞察到腳本設計，幫你找到第一個「說對話的主題」，3 支影片完整執行一遍完整流程。</p>
       <p class="pr-block-group-title">成品規格</p>
       <ul class="pr-block-list">
         <li>60秒內高清影片 3 支</li>
         <li>拍攝時間 2 小時內</li>
       </ul>
-
-      <p class="pr-block-group-title">服務內容</p>
+      <p class="pr-block-group-title">規劃服務</p>
       <ul class="pr-block-list">
-        <li>線上對焦 1 次</li>
+        <li>線上對焦 1 次（品牌方向確認）</li>
         <li>主題腳本選單 6 題</li>
-        <li>後製剪輯</li>
+        <li>後製剪輯、字幕、視覺</li>
       </ul>
     </div>
   </div>
@@ -648,26 +755,25 @@ footer p{font-size:11px;letter-spacing:0.4em;text-transform:uppercase;color:var(
     <div class="pr-block-left">
       <p class="pr-block-en">Ten Video</p>
       <p class="pr-block-name">實戰方案</p>
+      <p class="pr-block-tagline">建立完整的品牌內容規劃體系</p>
+      <p class="pr-block-price">NT$ 28,000</p>
     </div>
     <div class="pr-block-right">
-      <p class="pr-block-price">價格：NT$ 28,000</p>
-
+      <p class="pr-block-intro">從深度訪談開始，梳理你的品牌定位、目標受眾與核心訊息，建立一套可持續使用的內容方向，10 支影片全面執行。</p>
       <p class="pr-block-group-title">成品規格</p>
       <ul class="pr-block-list">
         <li>60秒內高清影片 10 支</li>
         <li>拍攝時間 5 小時內</li>
       </ul>
-
-      <p class="pr-block-group-title">服務內容</p>
+      <p class="pr-block-group-title">規劃服務</p>
       <ul class="pr-block-list">
+        <li>核心訪談 1 次（品牌深度挖掘）</li>
         <li>線上對焦 1 次</li>
-        <li>核心訪談 1 次</li>
-        <li>經營報告 1 份</li>
+        <li>經營報告 1 份（受眾洞察分析）</li>
         <li>主題腳本選單 15 題</li>
-        <li>後製剪輯</li>
-        <li>總結報告 1 份</li>
+        <li>後製剪輯、字幕、視覺</li>
+        <li>總結報告 1 份（內容方向建議）</li>
       </ul>
-
       <p class="pr-block-group-title">Bonus</p>
       <ul class="pr-block-list">
         <li style="color:var(--orange);">🎁 小人偶貼圖 6 支</li>
@@ -677,109 +783,99 @@ footer p{font-size:11px;letter-spacing:0.4em;text-transform:uppercase;color:var(
 
   <!-- 專業服務 -->
   <div class="pr-section">
-    <div class="pr-section-title">專業服務</div>
+    <div class="pr-section-title">每個方案都包含的專業服務</div>
     <div class="pr-service-item">
       <h4 class="pr-service-name">個人品牌內容企劃</h4>
-      <p class="pr-service-desc">我們不做空穴來風的內容，會根據人物核心理念與專業延伸相對應內容，也不貪爆笑版本，只要做好核心能提供給觀眾能取得學習的內容。</p>
+      <p class="pr-service-desc">不做空穴來風的內容。根據你的核心理念與專業，設計出你真正說得出口、觀眾真正想看的內容方向。</p>
+    </div>
+    <div class="pr-service-item">
+      <h4 class="pr-service-name">引導式拍攝</h4>
+      <p class="pr-service-desc">不需要背稿或演戲。透過問答引導，讓你在鏡頭前展現最自然、最有說服力的一面。</p>
     </div>
     <div class="pr-service-item">
       <h4 class="pr-service-name">社群視覺設計</h4>
-      <p class="pr-service-desc">我們以簡約、凸顯主角的風格為主，讓影片能於標題就知道這支影片在說什麼。</p>
+      <p class="pr-service-desc">簡約、凸顯主角，讓影片在標題就說清楚「這支影片在講什麼」，降低觀眾決策成本。</p>
     </div>
     <div class="pr-service-item">
-      <h4 class="pr-service-name">貼文文案寫作</h4>
-      <p class="pr-service-desc">根據商業目的撰寫文字，配合影片不同情境，讓文字發揮詳細說明的功能，給予觀看者從影片汲取快速知識，於文字擷取有用資訊。</p>
-    </div>
-  </div>
-
-  <!-- 技術規格 -->
-  <div class="pr-section">
-    <div class="pr-section-title">技術規格</div>
-    <div class="pr-service-item">
-      <h4 class="pr-service-name">高清影片輸出</h4>
-      <p class="pr-service-desc">以 CapCut 後製剪輯，輸出符合社群平台適用的 1080p 高畫質影片。</p>
-    </div>
-    <div class="pr-service-item">
-      <h4 class="pr-service-name">SEO 搜尋引擎適用內容</h4>
-      <p class="pr-service-desc">影片內容已是 SEO 搜尋的重要來源，影片及貼文欄皆導入 SEO 搜尋意圖內容。</p>
-    </div>
-    <div class="pr-service-item">
-      <h4 class="pr-service-name">經營方向分析</h4>
-      <p class="pr-service-desc">根據你的品牌現況與市場定位，提供具體的內容經營方向建議，幫助你建立長期的影音策略。</p>
+      <h4 class="pr-service-name">貼文文案</h4>
+      <p class="pr-service-desc">根據商業目的撰寫，讓影片的快速知識延伸到文字，給觀眾從影片汲取後，再從文字取得更多。</p>
     </div>
   </div>
 
   <!-- 彈性加購 -->
   <div class="pr-section">
-    <div class="pr-section-title">彈性加購項目</div>
+    <div class="pr-section-title">彈性加購</div>
     <div class="pr-service-item">
-      <h4 class="pr-service-name">單月社群內容規劃主題清單</h4>
-      <p class="pr-service-desc">非影片製作月份的社群經營內容規劃主題清單，提供持續性的內容方向建議，協助維持穩定的品牌聲量。</p>
+      <h4 class="pr-service-name">單月內容規劃主題清單</h4>
+      <p class="pr-service-desc">NT$ 3,000・非影片月份的社群內容方向建議，讓你在非拍攝月份也能維持穩定的品牌聲量。</p>
     </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="pr-cta">
+    <div class="pr-cta-text">
+      <h3>不確定哪個方案適合你？</h3>
+      <p>加 Line 聊聊，10 分鐘幫你找到最適合的起點。</p>
+    </div>
+    <a href="#" class="btn-primary">加 Line 諮詢</a>
   </div>
 
 </div>
 
-<!-- ══════════════════════════════════════════
-     PAGE 4：部落格
-══════════════════════════════════════════ -->
+<!-- ══ PAGE: BLOG ══ -->
 <div id="page-blog" class="page">
   <div class="hero hero-no-border">
     <h1>Blog <em>· 部落格</em></h1>
   </div>
 
   <div class="blog-layout">
-
-    <!-- 左側文章列表 -->
     <div class="blog-main">
       <div class="blog-list">
 
-        <div class="blog-item" data-bcat="strategy" onclick="openArticle('專業人士別演戲！「訪談式拍攝」引導出最真實的專家魅力','影音企劃思維','2025 · 03')">
+        <div class="blog-item" onclick="openArticle('article-hairstudio')">
           <div class="blog-thumb"></div>
-          <div class="blog-item-body">
-            <p class="blog-cat">影音企劃思維</p>
-            <p class="blog-title">專業人士別演戲！「訪談式拍攝」引導出最真實的專家魅力</p>
-            <p class="blog-date">2025 · 03</p>
-          </div>
+          <p class="blog-cat">案例拆解</p>
+          <p class="blog-title">從「拍有趣的」到「被收藏的專業」：我與美髮主理人的短影音品牌對焦紀錄</p>
+          <p class="blog-date">2025 · 03</p>
         </div>
 
-        <div class="blog-item" data-bcat="strategy" onclick="openArticle('2小時10支？免背稿的「聊天式」短影音製作揭密','影音企劃思維','2025 · 02')">
+        <div class="blog-item" onclick="openArticle('article-01')">
           <div class="blog-thumb"></div>
-          <div class="blog-item-body">
-            <p class="blog-cat">影音企劃思維</p>
-            <p class="blog-title">2小時10支？免背稿的「聊天式」短影音製作揭密</p>
-            <p class="blog-date">2025 · 02</p>
-          </div>
+          <p class="blog-cat">影音企劃思維</p>
+          <p class="blog-title">專業人士別演戲！「訪談式拍攝」引導出最真實的專家魅力</p>
+          <p class="blog-date">2025 · 03</p>
         </div>
 
-        <div class="blog-item" data-bcat="case" onclick="openArticle('你要流量還是留量？打造「品牌磁場」讓高單價客戶主動上門','案例拆解','2025 · 01')">
+        <div class="blog-item" onclick="openArticle('article-02')">
           <div class="blog-thumb"></div>
-          <div class="blog-item-body">
-            <p class="blog-cat">案例拆解</p>
-            <p class="blog-title">你要流量還是留量？打造「品牌磁場」讓高單價客戶主動上門</p>
-            <p class="blog-date">2025 · 01</p>
-          </div>
+          <p class="blog-cat">影音企劃思維</p>
+          <p class="blog-title">2小時10支？免背稿的「聊天式」短影音製作揭密</p>
+          <p class="blog-date">2025 · 02</p>
         </div>
 
-        <div class="blog-item" data-bcat="insight" onclick="openArticle('撐過「生長期」就是你的：為什麼個人品牌最怕「太快放棄」？','客戶訪談觀點','2024 · 12')">
+        <div class="blog-item" onclick="openArticle('article-03')">
           <div class="blog-thumb"></div>
-          <div class="blog-item-body">
-            <p class="blog-cat">客戶訪談觀點</p>
-            <p class="blog-title">撐過「生長期」就是你的：為什麼個人品牌最怕「太快放棄」？</p>
-            <p class="blog-date">2024 · 12</p>
-          </div>
+          <p class="blog-cat">案例拆解</p>
+          <p class="blog-title">你要流量還是留量？打造「品牌磁場」讓高單價客戶主動上門</p>
+          <p class="blog-date">2025 · 01</p>
+        </div>
+
+        <div class="blog-item" onclick="openArticle('article-04')">
+          <div class="blog-thumb"></div>
+          <p class="blog-cat">客戶訪談觀點</p>
+          <p class="blog-title">撐過「生長期」就是你的：為什麼個人品牌最怕「太快放棄」？</p>
+          <p class="blog-date">2024 · 12</p>
         </div>
 
       </div>
     </div>
 
-    <!-- 右側分類 -->
     <div class="blog-sidebar">
-      <p class="blog-sidebar-label">分類</p>
+      <span class="sidebar-label">分類</span>
       <div class="blog-cat-list">
         <div class="blog-cat-item">
           <span class="blog-cat-name">全部文章</span>
-          <span class="blog-cat-count">4</span>
+          <span class="blog-cat-count">5</span>
         </div>
         <div class="blog-cat-item">
           <span class="blog-cat-name">影音企劃思維</span>
@@ -787,7 +883,7 @@ footer p{font-size:11px;letter-spacing:0.4em;text-transform:uppercase;color:var(
         </div>
         <div class="blog-cat-item">
           <span class="blog-cat-name">案例拆解</span>
-          <span class="blog-cat-count">1</span>
+          <span class="blog-cat-count">2</span>
         </div>
         <div class="blog-cat-item">
           <span class="blog-cat-name">客戶訪談觀點</span>
@@ -796,164 +892,37 @@ footer p{font-size:11px;letter-spacing:0.4em;text-transform:uppercase;color:var(
       </div>
 
       <div class="blog-subscribe">
-        <p class="blog-sidebar-label" style="margin-top:48px;">電子報訂閱</p>
-        <p class="blog-subscribe-desc">每週一篇，關於短影音企劃、品牌思維與實戰案例。</p>
-        <div class="subscribe-form">
-          <input type="email" placeholder="你的 Email">
-          <button>訂閱</button>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="comment-section">
-    <h3>留言討論</h3>
-    <div class="comment-form">
-      <input type="text" placeholder="你的名字">
-      <input type="email" placeholder="Email（不公開）">
-      <textarea placeholder="留下你的想法或問題..."></textarea>
-      <button class="comment-btn">送出留言</button>
-    </div>
-  </div>
-</div>
-
-<!-- ══════════════════════════════════════════
-     PAGE 5：聯絡 / 諮詢
-══════════════════════════════════════════ -->
-<div id="page-contact" class="page">
-  <div class="hero">
-    <span class="hero-eyebrow">Contact · 聯絡諮詢</span>
-    <h1>讓我們<br><em>開始聊聊</em></h1>
-    <p class="hero-sub">填寫基本資料，我們將儘快為你安排諮詢。建議一併說明你的品牌現況，以便更精準地規劃。</p>
-  </div>
-
-  <div class="section" style="padding-top:64px;">
-    <div class="contact-grid">
-      <div class="contact-info">
-        <h2>直接<br><em>聯絡我</em></h2>
-        <p>多數客戶的專案，從開始討論到正式交付，平均為三個月左右。歡迎透過以下方式聯繫，或直接填寫右側表單。</p>
-        <div class="contact-details">
-          <div class="contact-row">
-            <span class="contact-label">Email</span>
-            <span class="contact-val"><a href="/cdn-cgi/l/email-protection#d8aabdf6a8aab7b2bdbbacf6baac98bfb5b9b1b4f6bbb7b5"><span class="__cf_email__" data-cfemail="3d4f58134d4f5257585e49135f497d5a505c5451135e5250">[email&#160;protected]</span></a></span>
-          </div>
-          <div class="contact-row">
-            <span class="contact-label">Line@</span>
-            <span class="contact-val"><a href="#">加入 Line@ 諮詢</a></span>
-          </div>
-          <div class="contact-row">
-            <span class="contact-label">Location</span>
-            <span class="contact-val" style="font-size:16px;">Taoyuan, Taiwan</span>
-          </div>
-          <div class="contact-row">
-            <span class="contact-label">Service Area</span>
-            <span class="contact-val" style="font-size:16px;">全台可接・外縣市另計車資</span>
-          </div>
-        </div>
-      </div>
-      <div class="contact-form">
-        <h3>詢價表單</h3>
-        <div class="form-group">
-          <label>姓名 *</label>
-          <input type="text" placeholder="你的姓名">
-        </div>
-        <div class="form-group">
-          <label>聯絡方式 *</label>
-          <input type="text" placeholder="Line ID 或 Email">
-        </div>
-        <div class="form-group">
-          <label>品牌 / 店家名稱</label>
-          <input type="text" placeholder="你的品牌或店家名稱">
-        </div>
-        <div class="form-group">
-          <label>所在地區</label>
-          <select>
-            <option value="" disabled selected>請選擇地區</option>
-            <option>北部</option>
-            <option>中部</option>
-            <option>南部</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>有興趣的方案</label>
-          <select>
-            <option value="" disabled selected>請選擇</option>
-            <option>試拍方案（3支 / $10,000）</option>
-            <option>實戰方案（10支 / $28,000）</option>
-            <option>還沒確定，想先諮詢</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>想拍攝的主題或需求（選填）</label>
-          <textarea placeholder="簡單說說你的品牌現況或想拍的方向..."></textarea>
-        </div>
-        <button class="form-submit">送出詢價</button>
-        <p class="form-note">送出後我們將於 1–2 個工作天內與你聯繫，謝謝！</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="section" style="padding-top:48px;padding-bottom:48px;background:var(--bg);">
-    <span class="block-label">Newsletter · 電子報</span>
-    <div class="subscribe-box" style="border:none;padding:0;">
-      <h3>訂閱影音品牌週報</h3>
-      <p style="margin-bottom:20px;">每週一篇，關於短影音企劃、品牌思維與實戰案例。</p>
-      <div class="subscribe-form" style="max-width:480px;">
-        <input type="email" placeholder="你的 Email 地址">
-        <button>訂閱</button>
+        <span class="sidebar-label" style="margin-top:48px;display:block;">追蹤我</span>
+        <p class="blog-subscribe-desc">更多短影音思維與品牌案例，歡迎追蹤 Facebook 粉絲專頁。</p>
+        <a href="https://www.facebook.com/YOUR_PAGE" target="_blank" class="fb-follow-btn">Facebook 粉絲專頁 →</a>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════
-     PAGE：文章內頁
-══════════════════════════════════════════ -->
+<!-- ══ PAGE: ARTICLE ══ -->
 <div id="page-article" class="page">
   <div class="hero">
     <div>
-      <p class="hero-eyebrow" id="article-cat">影音企劃思維</p>
-      <h1 id="article-title">專業人士別演戲！<br><em>「訪談式拍攝」引導出最真實的專家魅力</em></h1>
+      <p style="font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:0.55em;text-transform:uppercase;color:var(--orange);margin-bottom:24px;display:block;" id="article-cat">案例拆解</p>
+      <h1 id="article-title" style="font-size:36px;">文章標題</h1>
     </div>
   </div>
-
   <div class="article-layout">
     <div class="article-main">
       <div class="article-meta">
         <span id="article-date">2025 · 03</span>
         <button class="article-back" onclick="showPage('blog')">← 返回部落格</button>
       </div>
-
       <div class="article-thumb"></div>
-
-      <div class="article-body" id="article-body">
-        <p>你聽過「變色龍的煩惱」嗎？變色龍很厲害對吧？大家都以為它變色是為了躲避天敵、完美偽裝。科學家後來發現，變色龍變色，其實是為了「溝通」跟「調節體溫」。</p>
-        <p>更有趣的是，當變色龍「太努力想變成別的顏色」時，反而會搞砸自己的求偶大計，甚至讓同伴覺得「欸你誰啊怎麼怪怪的」。</p>
-        <p>聽起來是不是有點熟悉？有些人拍短影音，就像變色龍遇到了 Identity Crisis。明明平常聊天超自在，一拿起手機就開始「變色」：試著變得很嗨、很有梗、很像那個誰誰誰……拍出來連自己都覺得：「這真的是我嗎？有點尷尬…」</p>
-        <h2>當「偽裝」遇上「恐怖谷效應」</h2>
-        <p>心理學有個很有趣的現象叫「恐怖谷效應」。簡單說就是，當一個東西「看起來 90% 像人，但又有 10% 不太對」時，人們會產生一種說不上來的毛毛感。比如：逼真的蠟像、某些 AI 生成的人臉，你看了會覺得「嗯……哪裡怪怪的」。</p>
-        <p>短影音也是一樣的道理。當你背著一段「不太像你會說的話」，擺出「不太符合你個性的表情」，觀眾的潛意識會默默打開雷達：「嗯？這個人……哪裡怪怪的？」他們不會直接說，也說不上來，就是會有種「不太對勁」的微妙。</p>
-        <p>而對於專業服務來說，這種「感覺不對」，基本上就是把自己的客戶往外推了。</p>
-        <h2>你有過「心流時刻」嗎？</h2>
-        <p>心理學家有個很美的概念叫「心流」。就是當你在做某件事的時候：時間過得特別快、完全不會緊張或恍神、身體自然放鬆，講話超順、眼神會發光（真的會發光）。</p>
-        <p>你一定有過這種時刻。通常是當你在跟客戶解釋專業知識的時候，對吧？「為什麼你的頭髮會毛躁？我跟你說喔……」講到這些，你根本不用想、不用背稿、不會忘詞。因為這是你的「心流區」，是你最自在、最有力量的狀態。</p>
-        <p>「引導、訪談式拍攝」做的，就是把你帶回這個區域。就這麼簡單。</p>
-        <h2>結語：鑽石不需要偽裝成玻璃珠</h2>
-        <p>地質學有個冷知識：鑽石跟鉛筆芯（石墨）的成分一模一樣，都是碳。差別只在於，鑽石經過了超高壓、超高溫的淬鍊。</p>
-        <p>你的專業知識、你多年累積的經驗、你幫客戶解決問題的能力，這些都是時間淬鍊出來的鑽石。你不需要把自己包裝成閃亮亮的玻璃珠，去搶那些流量密碼。鑽石就該發出鑽石的光，堅定且珍貴。</p>
-      </div>
-
-      <!-- 作者 -->
+      <div class="article-body" id="article-body"></div>
       <div class="article-author">
         <div class="article-author-avatar"></div>
-        <div class="article-author-info">
+        <div>
           <p class="article-author-name">Betty</p>
-          <p class="article-author-bio">社群影音製作・幫美業品牌打造 60 秒短影音，讓你的專業被看見。</p>
+          <p class="article-author-bio">社群影音製作・幫品牌主找到最精準的受眾語言，然後用短影音說出來。</p>
         </div>
       </div>
-
-      <!-- 留言 -->
       <div class="comment-section">
         <h3>留言討論</h3>
         <div class="comment-form">
@@ -964,82 +933,224 @@ footer p{font-size:11px;letter-spacing:0.4em;text-transform:uppercase;color:var(
         </div>
       </div>
     </div>
-
-    <!-- 右側 -->
     <div class="article-sidebar">
-      <p class="blog-sidebar-label">分類</p>
+      <span class="sidebar-label">分類</span>
       <div class="blog-cat-list">
-        <div class="blog-cat-item">
-          <span class="blog-cat-name">全部文章</span>
-          <span class="blog-cat-count">4</span>
+        <div class="blog-cat-item"><span class="blog-cat-name">全部文章</span><span class="blog-cat-count">5</span></div>
+        <div class="blog-cat-item"><span class="blog-cat-name">影音企劃思維</span><span class="blog-cat-count">2</span></div>
+        <div class="blog-cat-item"><span class="blog-cat-name">案例拆解</span><span class="blog-cat-count">2</span></div>
+        <div class="blog-cat-item"><span class="blog-cat-name">客戶訪談觀點</span><span class="blog-cat-count">1</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PAGE: CONTACT ══ -->
+<div id="page-contact" class="page">
+  <div class="hero">
+    <div>
+      <span class="hero-eyebrow">Contact · 聯絡諮詢</span>
+      <h1>加 Line，<em>開始聊聊</em>。</h1>
+      <p class="hero-sub">不需要準備什麼，就算只有一個模糊的想法也可以。我幫你把想法變清楚。</p>
+    </div>
+  </div>
+
+  <div class="contact-split">
+    <div class="contact-left">
+      <h2>直接<em>聯絡我</em></h2>
+      <p>多數專案從第一次聊到完整交付，大約三個月。建議在聯繫時一併說明你的品牌現況或想拍的方向，這樣我可以更快給你實用的建議。</p>
+      <div class="contact-info-list">
+        <div class="contact-info-row">
+          <span class="contact-info-label">Email</span>
+          <span class="contact-info-val"><a href="mailto:re.project.bt@gmail.com">re.project.bt@gmail.com</a></span>
         </div>
-        <div class="blog-cat-item">
-          <span class="blog-cat-name">影音企劃思維</span>
-          <span class="blog-cat-count">2</span>
+        <div class="contact-info-row">
+          <span class="contact-info-label">Line ID</span>
+          <span class="contact-info-val" style="font-style:italic;color:var(--light);">（填入你的 Line ID）</span>
         </div>
-        <div class="blog-cat-item">
-          <span class="blog-cat-name">案例拆解</span>
-          <span class="blog-cat-count">1</span>
+        <div class="contact-info-row">
+          <span class="contact-info-label">Location</span>
+          <span class="contact-info-val">Taoyuan, Taiwan</span>
         </div>
-        <div class="blog-cat-item">
-          <span class="blog-cat-name">客戶訪談觀點</span>
-          <span class="blog-cat-count">1</span>
+        <div class="contact-info-row">
+          <span class="contact-info-label">服務範圍</span>
+          <span class="contact-info-val" style="font-size:15px;">全台可接・外縣市另計車資</span>
         </div>
       </div>
+    </div>
+    <div class="contact-right">
+      <h3>最快的方式</h3>
+      <p>直接傳訊息給我，不需要填表單。</p>
+      <a href="#" class="line-cta">
+        <div class="line-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.494.25l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+        </div>
+        <div class="line-cta-text">
+          <h4>加 Line 諮詢</h4>
+          <p>點此加入，直接傳訊息給我</p>
+        </div>
+      </a>
+      <a href="mailto:re.project.bt@gmail.com" class="email-cta">
+        <div class="email-cta-icon">✉️</div>
+        <div class="email-cta-text">
+          <h4>寄信給我</h4>
+          <p>re.project.bt@gmail.com</p>
+        </div>
+      </a>
     </div>
   </div>
 </div>
 
 <!-- CONTACT FOOTER -->
-<div class="contact-footer">
-  <div class="cf-inner">
-    <h2 class="cf-title">Contact</h2>
-    <p class="cf-desc">大部分客戶一次專案的製作時間，從第一次聚焦方案到完成交付所有影片，平均為三個月左右。影片交付的方式可以溝通協調為主。為了讓貴公司獲得更舒適的建議與服務，建議在首次聯繫時一併說明想配合的檔期排程，以便更精準地進行規劃，謝謝！</p>
-    <div class="cf-list">
-      <div class="cf-row">
-        <span class="cf-label">Name</span>
-        <span class="cf-val">Betty</span>
-      </div>
-      <div class="cf-row">
-        <span class="cf-label">Email</span>
-        <span class="cf-val"><a href="/cdn-cgi/l/email-protection#a2d0c78cd2d0cdc8c7c1d68cc0d6e2c5cfc3cbce8cc1cdcf"><span class="__cf_email__" data-cfemail="681a0d46181a07020d0b1c460a1c280f05090104460b0705">[email&#160;protected]</span></a></span>
-      </div>
-      <div class="cf-row">
-        <span class="cf-label">Line ID</span>
-        <span class="cf-val">—</span>
-      </div>
-      <div class="cf-row">
-        <span class="cf-label">Location</span>
-        <span class="cf-val">Taoyuan, Taiwan</span>
-      </div>
-      <div class="cf-row">
-        <span class="cf-label">公司名稱</span>
-        <span class="cf-val">莉芸企業社</span>
-      </div>
-      <div class="cf-row">
-        <span class="cf-label">統一編號</span>
-        <span class="cf-val">60122994</span>
-      </div>
-      <div class="cf-row">
-        <span class="cf-label">代表人姓名</span>
-        <span class="cf-val">林慈棋</span>
-      </div>
-    </div>
+<div class="cf-footer">
+  <h2 class="cf-title">Contact</h2>
+  <p class="cf-desc">大部分客戶一次專案的製作時間，從第一次聚焦方案到完成交付所有影片，平均為三個月左右。為了讓你獲得更舒適的建議與服務，建議在首次聯繫時一併說明想配合的檔期排程。</p>
+  <div class="cf-rows">
+    <div class="cf-row"><span class="cf-label">Name</span><span class="cf-val">Betty</span></div>
+    <div class="cf-row"><span class="cf-label">Email</span><span class="cf-val"><a href="mailto:re.project.bt@gmail.com">re.project.bt@gmail.com</a></span></div>
+    <div class="cf-row"><span class="cf-label">Line ID</span><span class="cf-val">—</span></div>
+    <div class="cf-row"><span class="cf-label">Location</span><span class="cf-val">Taoyuan, Taiwan</span></div>
+    <div class="cf-row"><span class="cf-label">公司名稱</span><span class="cf-val">莉芸企業社</span></div>
+    <div class="cf-row"><span class="cf-label">統一編號</span><span class="cf-val">60122994</span></div>
+    <div class="cf-row"><span class="cf-label">代表人</span><span class="cf-val">林慈棋</span></div>
   </div>
 </div>
 
 <footer>
   <p>Copyright © Betty Tzeng</p>
+  <p>Social Media Plan</p>
 </footer>
 
+<!-- CASE MODAL -->
+<div class="modal-overlay" id="case-modal" onclick="if(event.target===this)closeCaseModal()">
+  <div class="modal-box">
+    <div class="modal-topline"></div>
+    <div class="modal-hero">
+      <button class="modal-close" onclick="closeCaseModal()"></button>
+      <span class="modal-no" id="cm-no"></span>
+      <h2 class="modal-title" id="cm-title"></h2>
+      <div class="modal-tags" id="cm-tags"></div>
+    </div>
+    <div class="modal-body" id="cm-body"></div>
+    <div class="modal-footer">
+      <span class="modal-footer-brand">Betty Tzeng</span>
+      <div class="modal-footer-line"></div>
+    </div>
+  </div>
+</div>
+
 <script>
+var caseData = {
+  'case01': {
+    no: 'No. 01 · Hair Studio',
+    title: '明明比別人努力，<br>為什麼被看見的<span class="hl">總不是你？</span>',
+    tags: '<span class="modal-tag modal-tag--format">短影音</span><span class="modal-tag modal-tag--funnel">引流</span>',
+    body: `
+      <div class="modal-section">
+        <div class="modal-section-header"><span class="modal-section-num">01</span><span class="modal-section-label">案例背景</span><div class="modal-section-rule"></div></div>
+        <div class="modal-section-content">
+          <ul class="modal-detail-list">
+            <li>客戶類型：個人品牌創作者，長期深耕某領域，有豐富的實戰經驗</li>
+            <li>遇到的問題：影片做了很多，但觸及率始終上不去，覺得自己的努力沒有被看見</li>
+            <li>原本的假設：以為是拍攝技術或剪輯不夠好</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-header"><span class="modal-section-num">02</span><span class="modal-section-label">我的觀察</span><div class="modal-section-rule"></div></div>
+        <div class="modal-section-content">
+          <div class="modal-insight"><p class="modal-insight-label">真正卡住的地方</p><p class="modal-insight-text">他卡住的不是拍攝技術，而是敘事——不知道怎麼把「我很努力」這件事，轉化成讓觀眾覺得「這說的就是我」的語言。</p></div>
+          <ul class="modal-detail-list">
+            <li>內容以「我怎麼做」為主角，而非「你有什麼問題」</li>
+            <li>缺乏一個能讓觀眾在前三秒就停下來的情緒鉤子</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-header"><span class="modal-section-num">03</span><span class="modal-section-label">策略調整</span><div class="modal-section-rule"></div></div>
+        <div class="modal-section-content">
+          <div class="modal-strategy"><p class="modal-strategy-q">怎麼設計</p><p class="modal-strategy-a">把開場從「分享心得」改為「點出痛點」——先讓觀眾感到被說中，再引入解法。</p></div>
+          <div class="modal-strategy"><p class="modal-strategy-q">為什麼這樣設計</p><p class="modal-strategy-a">引流型內容的核心邏輯是：讓對的人看見「這個人懂我」，建立信任感，而不是展示自己有多厲害。</p></div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-header"><span class="modal-section-num">04</span><span class="modal-section-label">上線後的觀察</span><div class="modal-section-rule"></div></div>
+        <div class="modal-section-content">
+          <div class="modal-observation"><p class="modal-observation-label">我注意到的轉變</p><p class="modal-observation-text">留言區開始出現以前沒有的回應——不是「謝謝分享」，而是「這說的就是我」。觀眾從旁觀者變成了對話者。</p></div>
+          <ul class="modal-detail-list">
+            <li>客戶第一次感受到內容在「跟對的人說話」，而不只是在播放</li>
+            <li>這支片讓她開始相信：表達方式的改變，比拍攝技術更關鍵</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-header"><span class="modal-section-num">05</span><span class="modal-section-label">我的反思</span><div class="modal-section-rule"></div></div>
+        <div class="modal-section-content">
+          <p class="modal-reflection">這個案例讓我更確認一件事：努力本身不是內容，努力背後那個「你也有這種感覺嗎」才是。幫助創作者找到那個轉化的語言，是我最想做的事。</p>
+        </div>
+      </div>
+    `
+  }
+};
+
+var articles = {
+  'article-hairstudio': {
+    title: '從「拍有趣的」到「被收藏的專業」',
+    cat: '案例拆解',
+    date: '2025 · 03',
+    body: `
+      <p>最近與一位相當優秀的美髮主理人合作，他大約三十多歲，年紀與我相仿，卻已經經營著五間連鎖髮廊。在剛開始嘗試短影音時，他與大多數人的想法很接近：希望能拍一些有趣的、具備娛樂性的內容，以此來提升帳號的曝光量。</p>
+      <p>這種想法背後通常藏著一種微小的焦慮——擔心如果不夠「有趣」，就沒人願意停下來看一眼。在第一次擬定腳本時，我也面臨了觀點的磨合，他更換了幾個他認為比較好玩的主題。</p>
+      <p>對我來說，「舒適」是創作的最高原則。既然他是影片的核心，內容必須符合他當下的想法，所以我們在尊重彼此意見的基礎上，完成了一系列的拍攝。</p>
+      <h2>意外的「收藏鍵」與專業的回響</h2>
+      <p>然而，在第一波內容上架後，主理人的回饋讓我印象深刻。他驚訝地發現，那些我們花心思呈現「美髮本業專業」的影片，雖然節奏輕鬆，卻獲得了更多的粉絲關注，甚至有很多「收藏」的數據。</p>
+      <p>「我以為要拍跟工作無關的東西，才可以讓人有興趣。」他這麼對我說。</p>
+      <p>這讓我體會到，在流量的洪流裡，大眾確實會被趣味吸引，但真正能讓人想「留下來」並「按下收藏」的，往往是那些能展現你真實底蘊的專業瞬間。</p>
+      <h2>讓內容順著目標緩緩生長</h2>
+      <p>如果用行銷漏斗來看，大量湧入的流量只是入口。有些人只是路過，而有些人則是默默觀察的潛水客，他們會反覆收集資料，最後才決定是否要把自己的頭髮（或是一份信任）交給你。</p>
+      <p>我發現，比起盲目追逐高流量，更舒服的方式是先從「本業」扎根。每一次的對焦，都不是為了推翻對方的想法，而是慢慢地將內容修正到更靠近對方的「人生階段目標」。</p>
+      <p>這種一步步調整的過程，或許走得慢一點，但每一段影像都會更精準地拼湊出你想要的「品牌樣貌」。這不是為了迎合市場，而是為了讓對的人，在最合適的時候看見你。</p>
+    `
+  }
+};
+
+function openProjectModal(id) {
+  document.getElementById(id).classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeProjectModal(id) {
+  document.getElementById(id).classList.remove('open');
+  document.body.style.overflow = '';
+}
+function openCaseModal(id) {
+  var d = caseData[id];
+  if(!d) return;
+  document.getElementById('cm-no').textContent = d.no;
+  document.getElementById('cm-title').innerHTML = d.title;
+  document.getElementById('cm-tags').innerHTML = d.tags;
+  document.getElementById('cm-body').innerHTML = d.body;
+  document.getElementById('case-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeCaseModal() {
+  document.getElementById('case-modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
 function closeMenu() {
   document.getElementById('nav-menu').classList.remove('open');
 }
-function openArticle(title, cat, date) {
-  document.getElementById('article-title').textContent = title;
-  document.getElementById('article-cat').textContent = cat;
-  document.getElementById('article-date').textContent = date;
+function openArticle(id, cat, date) {
+  if(articles[id]) {
+    var a = articles[id];
+    document.getElementById('article-title').textContent = a.title;
+    document.getElementById('article-cat').textContent = a.cat;
+    document.getElementById('article-date').textContent = a.date;
+    document.getElementById('article-body').innerHTML = a.body;
+  } else {
+    document.getElementById('article-title').textContent = id;
+    document.getElementById('article-cat').textContent = cat || '';
+    document.getElementById('article-date').textContent = date || '';
+  }
   showPage('article');
 }
 function showPage(id) {
@@ -1050,6 +1161,13 @@ function showPage(id) {
   if(nav) nav.classList.add('active');
   window.location.hash = id;
   window.scrollTo({top:0, behavior:'smooth'});
+}
+function filterPf(el, cat) {
+  document.querySelectorAll('.pf-filter .filter-tab').forEach(function(t){ t.classList.remove('active'); });
+  el.classList.add('active');
+  document.querySelectorAll('.pf-item').forEach(function(card){
+    card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+  });
 }
 function filterCases(el, cat) {
   document.querySelectorAll('.case-filter .filter-tab').forEach(function(t){ t.classList.remove('active'); });
@@ -1083,7 +1201,23 @@ document.addEventListener('DOMContentLoaded', function(){
       }
     });
   }
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeCaseModal();
+  });
 });
 </script>
+
+<!-- 浮動按鈕 -->
+<div class="float-btns">
+  <a href="https://www.facebook.com/YOUR_PAGE" target="_blank" class="float-btn float-btn--fb">
+    <span class="float-btn-icon">f</span>
+    <span class="float-btn-label">Facebook</span>
+  </a>
+  <a href="https://line.me/YOUR_GROUP" target="_blank" class="float-btn float-btn--line">
+    <span class="float-btn-icon">L</span>
+    <span class="float-btn-label">免費資源 LINE社群</span>
+  </a>
+</div>
+
 </body>
 </html>
