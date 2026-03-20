@@ -431,6 +431,7 @@ footer p{font-size:10px;letter-spacing:0.4em;text-transform:uppercase;color:var(
   .pf-list-arrow{display:none;}
 }
 
+.pf-list-more{text-align:center;font-size:11px;letter-spacing:0.3em;color:var(--light);font-family:'Montserrat',sans-serif;padding:32px 0 8px;}
 /* ── PF TEXT CARD ── */
 .pf-img-card{width:100%;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding:28px;background:var(--bg);position:relative;overflow:hidden;min-height:200px;}
 .pf-img-card::before{content:'';position:absolute;inset:0;pointer-events:none;}
@@ -473,6 +474,15 @@ footer p{font-size:10px;letter-spacing:0.4em;text-transform:uppercase;color:var(
 @media(max-width:640px){
   .modal-section-content{padding-left:0;}
 }
+
+/* ── MOBILE STICKY BAR ── */
+.mobile-sticky{display:none;position:fixed;bottom:0;left:0;right:0;z-index:1000;background:#fff;border-top:1px solid var(--border);padding:10px 16px;display:flex;gap:8px;}
+.mobile-sticky-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:11px 8px;border-radius:8px;font-size:11px;font-weight:600;letter-spacing:0.1em;text-decoration:none;font-family:'Montserrat',sans-serif;transition:opacity 0.2s;}
+.mobile-sticky-btn--fb{background:var(--bg);color:var(--text);border:1px solid var(--border);}
+.mobile-sticky-btn--line{background:var(--orange);color:#fff;border:1px solid var(--orange);}
+.mobile-sticky-btn:hover{opacity:0.85;}
+@media(min-width:769px){.mobile-sticky{display:none !important;}}
+@media(max-width:768px){.mobile-sticky{display:flex;}.float-btns{display:none;}}
 </style>
 </head>
 <body>
@@ -483,7 +493,7 @@ footer p{font-size:10px;letter-spacing:0.4em;text-transform:uppercase;color:var(
   <button class="hamburger" id="hamburger">☰</button>
   <div class="nav-links" id="nav-menu">
     <a id="nav-home" class="active" onclick="showPage('home');closeMenu()">關於</a>
-    <a id="nav-portfolio" onclick="showPage('portfolio');closeMenu()">客戶案例</a>
+    <a id="nav-portfolio" onclick="showPage('portfolio');closeMenu()">案例解析</a>
     <a id="nav-pricing" onclick="showPage('pricing');closeMenu()">費用參考</a>
     <a id="nav-blog" onclick="showPage('blog');closeMenu()">部落格</a>
     <a id="nav-contact" class="nav-cta" onclick="showPage('contact');closeMenu()">加 Line 諮詢</a>
@@ -770,7 +780,7 @@ footer p{font-size:10px;letter-spacing:0.4em;text-transform:uppercase;color:var(
 <div id="page-project-changhua" class="page">
 
   <div class="proj-nav">
-    <span class="proj-back" onclick="showPage('portfolio')">返回客戶案例</span>
+    <span class="proj-back" onclick="showPage('portfolio')">返回案例解析</span>
     <span class="logo">Betty Tzeng</span>
   </div>
 
@@ -782,7 +792,7 @@ footer p{font-size:10px;letter-spacing:0.4em;text-transform:uppercase;color:var(
     <div class="proj-meta">
       <div class="proj-meta-item">
         <p class="proj-meta-label">客戶類型</p>
-        <p class="proj-meta-val">美髮髮廊・在地品牌</p>
+        <p class="proj-meta-val">髮廊老闆・在地個人品牌</p>
       </div>
       <div class="proj-meta-item">
         <p class="proj-meta-label">合作內容</p>
@@ -948,7 +958,7 @@ footer p{font-size:10px;letter-spacing:0.4em;text-transform:uppercase;color:var(
 <div id="page-project-haircare" class="page">
 
   <div class="proj-nav">
-    <span class="proj-back" onclick="showPage('portfolio')">返回客戶案例</span>
+    <span class="proj-back" onclick="showPage('portfolio')">返回案例解析</span>
     <span class="logo">Betty Tzeng</span>
   </div>
 
@@ -960,7 +970,7 @@ footer p{font-size:10px;letter-spacing:0.4em;text-transform:uppercase;color:var(
     <div class="proj-meta">
       <div class="proj-meta-item">
         <p class="proj-meta-label">客戶類型</p>
-        <p class="proj-meta-val">髮品品牌・個人品牌</p>
+        <p class="proj-meta-val">個人形象・個人品牌</p>
       </div>
       <div class="proj-meta-item">
         <p class="proj-meta-label">合作內容</p>
@@ -1020,7 +1030,7 @@ footer p{font-size:10px;letter-spacing:0.4em;text-transform:uppercase;color:var(
 <!-- ══ PAGE: PORTFOLIO ══ -->
 <div id="page-portfolio" class="page">
   <div class="hero">
-    <h1>Portfolio <em>· 客戶案例</em></h1>
+    <h1>Portfolio <em>· 案例解析</em></h1>
   </div>
 
   <div class="pf-filter">
@@ -1045,19 +1055,13 @@ footer p{font-size:10px;letter-spacing:0.4em;text-transform:uppercase;color:var(
       <span class="pf-list-arrow">→</span>
     </div>
 
-    
-
-    <div class="pf-list-item" data-cat="brand">
-      <span class="pf-list-industry">品牌故事</span>
-      <p class="pf-list-desc">設計師的第一支影片</p>
-      <span class="pf-list-arrow">→</span>
-    </div>
-
     <div class="pf-list-item" data-cat="haircare" onclick="showPage('project-haircare')">
       <span class="pf-list-industry">髮品</span>
       <p class="pf-list-desc">高階副總的生活樂趣</p>
       <span class="pf-list-arrow">→</span>
     </div>
+
+  <div class="pf-list-more">── 持續更新中，更多案例陸續加入 ──</div>
 
   </div>
 
@@ -1449,7 +1453,7 @@ document.addEventListener('DOMContentLoaded',function(){
   });
 });
 </script>
-<!-- 浮動按鈕 -->
+<!-- 浮動按鈕（桌機版） -->
 <div class="float-btns">
   <a href="https://www.facebook.com/YOUR_PAGE" target="_blank" class="float-btn float-btn--fb">
     <span class="float-btn-icon">f</span>
@@ -1458,6 +1462,17 @@ document.addEventListener('DOMContentLoaded',function(){
   <a href="https://line.me/YOUR_GROUP" target="_blank" class="float-btn float-btn--line">
     <span class="float-btn-icon">L</span>
     <span class="float-btn-label">免費資源 LINE社群</span>
+  </a>
+</div>
+<!-- 手機底部 Sticky Bar -->
+<div class="mobile-sticky">
+  <a href="https://www.facebook.com/YOUR_PAGE" target="_blank" class="mobile-sticky-btn mobile-sticky-btn--fb">
+    <span>f</span>
+    <span>Facebook</span>
+  </a>
+  <a href="https://line.me/YOUR_GROUP" target="_blank" class="mobile-sticky-btn mobile-sticky-btn--line">
+    <span>L</span>
+    <span>免費資源 LINE社群</span>
   </a>
 </div>
 </body>
